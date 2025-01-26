@@ -1,0 +1,26 @@
+{
+  "name": "typebox-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/src/cli.js",
+  "bin": {
+    "typebox-generator": "dist/src/cli.js"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.10.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@sinclair/typebox": "^0.34.13",
+    "@sinclair/typebox-codegen": "^0.10.5",
+    "commander": "^13.1.0",
+    "prettier": "^3.4.2"
+  }
+}

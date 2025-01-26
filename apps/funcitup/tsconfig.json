@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es2020", // Target ES2020
+    "module": "commonjs", // Use CommonJS module system
+    "outDir": "dist", // Output directory
+    "rootDir": ".", // Root directory
+    "strict": true, // Enable strict type-checking options
+    "esModuleInterop": true, // Enable interoperability between CommonJS and ES Modules
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true, // Ensure consistent casing in file names
+    "useDefineForClassFields": true // Use define for class fields
+  },
+  "include": ["src/**/*", "test/**/*"], // Include source and test files
+  "exclude": ["node_modules", "dist"] // Exclude node_modules and dist directories
+}
