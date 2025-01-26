@@ -1,4 +1,5 @@
 packages:
   - 'apps/funcitup'
   - 'packages/decorators'
+  - 'packages/azure-functions-support'
   - 'packages/typebox-generator'

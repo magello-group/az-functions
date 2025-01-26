@@ -1,6 +1,6 @@
 import { get, path, service } from 'decorators'
-import { AzureFunctionService } from '../base/AzureFunctionService'
 import { Type as T, Static as S } from '@sinclair/typebox'
+import { AzureFunctionService } from 'azure-functions-support'
 
 const helloSchema = T.Object({
   params: T.Object({

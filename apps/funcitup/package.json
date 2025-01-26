@@ -22,6 +22,7 @@
     "@sinclair/typebox": "^0.34.13",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
+    "azure-functions-support": "workspace:^",
     "decorators": "workspace:^"
   },
   "devDependencies": {

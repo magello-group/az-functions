@@ -176,7 +176,7 @@ export class AzureFunctionService extends BaseService<
  * @throws Will throw an error if the service is not found or if there is an issue
  *         adding the Azure Function.
  */
-export const addAzureFunction = (serviceClass: typeof AzureFunctionService) => {
+export const addHttpFunction = (serviceClass: typeof AzureFunctionService) => {
   try {
     const service = getService(serviceClass)
     if (!service) {
@@ -188,7 +188,7 @@ export const addAzureFunction = (serviceClass: typeof AzureFunctionService) => {
       const validate = ajv.compile<RequestParameters>(
         method.schema?.request || {}
       )
-      const trigger = `${util.capitalize(service?.name, '_', method.name)}`
+      const trigger = `${util.capitalize(service.name, '_', method.name)}`
       app.http(trigger, {
         methods: [method.httpMethod.toUpperCase() as HttpMethod],
         authLevel: 'anonymous',

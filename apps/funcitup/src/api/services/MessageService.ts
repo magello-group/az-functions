@@ -1,6 +1,6 @@
 import { post, service, body, path, BaseService } from 'decorators'
-import { AzureFunctionService } from '../base/AzureFunctionService'
 import { MessageBody, schemas } from './models/Message.models'
+import { AzureFunctionService } from 'azure-functions-support'
 
 @service('messages')
 export class MessageService extends AzureFunctionService {

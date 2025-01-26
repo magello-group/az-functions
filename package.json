@@ -5,7 +5,8 @@
   "workspaces": [
     "apps/funcitup",
     "packages/decorators",
-    "packages/typebox-generator"
+    "packages/typebox-generator",
+    "packages/azure-functions-support"
   ],
   "scripts": {
     "build": "pnpm -r run build",
