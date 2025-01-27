@@ -13,7 +13,7 @@
     "postdeploy": "rimraf dist/host.json dist/local.settings.json",
     "watch": "tsc -w",
     "clean": "rimraf dist",
-    "prestart": "pnpm run clean && pnpm run build:prod",
+    "prestart": "pnpm run clean && pnpm run build",
     "start": "func start",
     "test": "echo \"No tests yet...\""
   },
@@ -22,7 +22,7 @@
     "@sinclair/typebox": "^0.34.13",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
-    "azure-functions-support": "workspace:^",
+    "decorators-functions": "workspace:^",
     "decorators": "workspace:^"
   },
   "devDependencies": {

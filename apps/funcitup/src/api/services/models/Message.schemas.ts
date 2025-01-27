@@ -10,22 +10,20 @@ export const Request = Type.Object(
     params: Type.Record(
       Type.String(),
       Type.Union([
+        Type.Array(Type.String()),
         Type.String(),
         Type.Number(),
         Type.Boolean(),
-        Type.Null(),
-        Type.Undefined(),
       ]),
       { description: 'The route parameters of the request.' }
     ),
     query: Type.Record(
       Type.String(),
       Type.Union([
+        Type.Array(Type.String()),
         Type.String(),
         Type.Number(),
         Type.Boolean(),
-        Type.Null(),
-        Type.Undefined(),
       ]),
       { description: 'The query parameters of the request.' }
     ),

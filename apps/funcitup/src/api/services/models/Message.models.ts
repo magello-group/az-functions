@@ -13,11 +13,11 @@ export interface Request {
   /**
    * @description The route parameters of the request.
    */
-  params: Record<string, string | number | boolean | null | undefined>
+  params: Record<string, string[] |string | number | boolean>
   /**
    * @description The query parameters of the request.
    */
-  query: Record<string, string | number | boolean | null | undefined>
+  query: Record<string, string[] |string | number | boolean>
 }
 
 /**

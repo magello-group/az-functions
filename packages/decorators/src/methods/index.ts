@@ -46,7 +46,7 @@ export type MethodDecorator = (
   context: ClassMethodDecoratorContext
 ) => void
 
-type Constructor<T> = new () => T;
+export type Constructor<T> = new () => T;
 
 /**
  * Holdd the values of the class method decorator.

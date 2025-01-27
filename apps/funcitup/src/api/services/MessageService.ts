@@ -1,6 +1,6 @@
 import { post, service, body, path } from 'decorators'
 import { MessageBody, schemas } from './models/Message.models'
-import { AzureFunctionService } from 'azure-functions-support'
+import { AzureFunctionService } from 'decorators-functions'
 
 @service('messages')
 export class MessageService extends AzureFunctionService {
@@ -8,12 +8,12 @@ export class MessageService extends AzureFunctionService {
   @body<MessageBody>()
   @path('id')
   public async send(
-    requestBosdy: MessageBody,
+    requestBody: MessageBody,
     id: number
   ) {
     return {
       from: id,
-      requestBosdy,
+      requestBosdy: requestBody,
       message: 'Message sent successfully',
       schema: schemas.MessageRequest,
     }

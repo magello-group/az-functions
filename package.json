@@ -6,7 +6,7 @@
     "apps/funcitup",
     "packages/decorators",
     "packages/typebox-generator",
-    "packages/azure-functions-support"
+    "packages/decorators-functions"
   ],
   "scripts": {
     "build": "pnpm -r run build",

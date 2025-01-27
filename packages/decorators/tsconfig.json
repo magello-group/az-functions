@@ -9,7 +9,8 @@
     "skipLibCheck": true, // Skip type checking of declaration files
     "forceConsistentCasingInFileNames": true, // Ensure consistent casing in file names
     "declaration": true, // Emit TypeScript declaration files
-    "declarationMap": true // Emit source maps for declaration files (optional)
+    "declarationMap": true, // Emit source maps for declaration files (optional)
+    "sourceMap": true // Emit source maps
   },
   "include": ["src/**/*", "test/**/*"], // Include source and test files
   "exclude": ["node_modules", "dist"] // Exclude node_modules and dist directories
