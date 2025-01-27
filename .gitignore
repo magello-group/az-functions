@@ -23,7 +23,7 @@ local.settings.json
 
 node_modules
 dist
-
+OLD-es-lint-rc.js
 # Local python packages
 .python_packages/
 
