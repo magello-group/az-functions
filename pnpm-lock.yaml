@@ -54,9 +54,6 @@ importers:
       esbuild:
         specifier: ^0.24.2
         version: 0.24.2
-      eslint:
-        specifier: ^9.19.0
-        version: 9.19.0
       globals:
         specifier: ^15.14.0
         version: 15.14.0
