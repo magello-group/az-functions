@@ -8,6 +8,7 @@ const helloSchema = T.Object({
   }),
 })
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const response = T.Object({
   message: T.String(),
 })

@@ -7,12 +7,28 @@ export const Request = Type.Object(
     headers: Type.Record(Type.String(), Type.String(), {
       description: 'The headers of the request.',
     }),
-    params: Type.Record(Type.String(), Type.Any(), {
-      description: 'The route parameters of the request.',
-    }),
-    query: Type.Record(Type.String(), Type.Any(), {
-      description: 'The query parameters of the request.',
-    }),
+    params: Type.Record(
+      Type.String(),
+      Type.Union([
+        Type.String(),
+        Type.Number(),
+        Type.Boolean(),
+        Type.Null(),
+        Type.Undefined(),
+      ]),
+      { description: 'The route parameters of the request.' }
+    ),
+    query: Type.Record(
+      Type.String(),
+      Type.Union([
+        Type.String(),
+        Type.Number(),
+        Type.Boolean(),
+        Type.Null(),
+        Type.Undefined(),
+      ]),
+      { description: 'The query parameters of the request.' }
+    ),
   },
   { interface: 'Request' }
 )

@@ -26,12 +26,16 @@
     "decorators": "workspace:^"
   },
   "devDependencies": {
+    "@eslint/js": "^9.19.0",
     "@types/node": "18.x",
     "azure-functions-core-tools": "^4.x",
     "esbuild": "^0.24.2",
+    "eslint": "^9.19.0",
+    "globals": "^15.14.0",
     "rimraf": "^5.0.0",
     "ts-node": "^10.9.2",
     "typebox-generator": "workspace:^",
-    "typescript": "^5"
+    "typescript": "^5",
+    "typescript-eslint": "^8.21.0"
   }
 }

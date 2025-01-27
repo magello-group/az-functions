@@ -1,4 +1,4 @@
-import { post, service, body, path, BaseService } from 'decorators'
+import { post, service, body, path } from 'decorators'
 import { MessageBody, schemas } from './models/Message.models'
 import { AzureFunctionService } from 'azure-functions-support'
 
