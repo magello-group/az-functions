@@ -10,14 +10,19 @@ const program = new Command()
 
 program
   .name('typebox-generator')
-  .description('Tool to generate Typebox/JSON Schema from TypeScript files named *.models.ts')
+  .description(
+    'Tool to generate Typebox/JSON Schema from TypeScript files named *.models.ts'
+  )
   .version('1.0.0')
   .option('-j, --json', 'Generate JSON Schema. Default: typebox schema')
   .option('-r, --removetypes', 'Remove `export type` from the generated schema')
   .argument('<root>', 'Files to convert to schemas. Pattern *.models.ts')
   .action(async (root, options) => {
     try {
-      const getModelFiles = async (dir: string, extension: string): Promise<string[]> => {
+      const getModelFiles = async (
+        dir: string,
+        extension: string
+      ): Promise<string[]> => {
         let results: string[] = []
         const list = await fs.readdir(dir, { withFileTypes: true })
         for (const file of list) {
@@ -72,7 +77,11 @@ program
           trailingComma: 'es5',
           printWidth: 80,
         })
-        await fs.writeFile(outputFile, `// generated file, do not edit\n\n${output}`, 'utf-8')
+        await fs.writeFile(
+          outputFile,
+          `// generated file, do not edit\n\n${output}`,
+          'utf-8'
+        )
 
         const relativeOutputFile = path.relative(root, outputFile)
         console.log(`Schema written to ${relativeOutputFile}`)

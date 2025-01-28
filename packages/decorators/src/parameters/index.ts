@@ -8,8 +8,8 @@ import { Parameter, ParameterType } from '../classes'
  * @param _ - The context of the class method decorator.
  */
 export type ParameterDecorator = (
-  target: Function,
-  _: ClassMethodDecoratorContext
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
+  target: Function
 ) => void
 
 /**
@@ -22,7 +22,7 @@ export type ParameterDecorator = (
  */
 export const path =
   <T = string>(name: string, defaultValue?: T): ParameterDecorator =>
-  (target, _) => {
+  (target) => {
     getParam(target, name, 'path', defaultValue)
   }
 
@@ -36,13 +36,13 @@ export const path =
  */
 export const query =
   <T = string>(name: string, defaultValue?: T): ParameterDecorator =>
-  (target, _) => {
+  (target) => {
     getParam(target, name, 'query', defaultValue)
   }
 
 export const head =
   <T = string>(name: string, defaultValue?: T): ParameterDecorator =>
-  (target, _) => {
+  (target) => {
     getParam(target, name, 'head', defaultValue)
   }
 
@@ -54,8 +54,8 @@ export const head =
  * @returns {Function} - A decorator function that registers the body parameter.
  */
 export const body =
-  <T = {}>(defaultValue?: T): ParameterDecorator =>
-  (target, _) => {
+  <T extends object>(defaultValue?: T): ParameterDecorator =>
+  (target) => {
     getParam(target, 'body', 'body', defaultValue)
   }
 
@@ -69,13 +69,13 @@ export const body =
  * @param defaultValue - An optional default value for the parameter.
  */
 const getParam = <T>(
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
   target: Function,
   name: string,
   where: ParameterType,
   defaultValue?: T
 ) => {
-
-  let method = getMethod(target)
+  const method = getMethod(target)
   method.parameters.unshift(
     Parameter.createParameter(name, where, defaultValue)
   )

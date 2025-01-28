@@ -17,7 +17,6 @@ import {
   Method,
   Parameter,
   RequestParameters,
-  service,
   util,
 } from 'decorators'
 
@@ -34,32 +33,12 @@ import {
 //   }
 // }
 
-
 /**
  * AzureFunctionService class extends the BaseService to handle HTTP requests in an Azure Function context.
  *
  * @template ContextLogger - The type of the context logger.
  * @template HttpRequest - The type of the HTTP request.
  * @template HttpResponseInit - The type of the initial HTTP response.
- *
- * @method handleReq
- * Handles an HTTP request by validating parameters, executing the specified method, and returning an appropriate response.
- *
- * @param {HttpRequest} request - The HTTP request object.
- * @param {InvocationContext} context - The invocation context, which includes logging and other context-specific information.
- * @param {Method} method - The method to be executed, which includes the function and its parameters.
- * @param {ValidateFunction<RequestParameters>} validate - A function to validate the request parameters.
- * @returns {Promise<HttpResponseInit | HttpResponse>} A promise that resolves to an HTTP response, which can be either an `HttpResponseInit` or an `HttpResponse`.
- * @throws Will catch and log any errors that occur during the execution and return an internal server error response.
- *
- * @method createValidationError
- * Creates a validation error response.
- *
- * @method createError
- * Creates a generic error response.
- *
- * @method internalServerError
- * Creates an internal server error response.
  */
 export class AzureFunctionService extends BaseService<
   InvocationContext,
@@ -121,15 +100,33 @@ export class AzureFunctionService extends BaseService<
     }
   }
 
-  createValidationError(body: any): HttpResponseInit {
+  /**
+   * Creates an HTTP response representing a validation error.
+   *
+   * @param body - The body of the error response, typically containing details about the validation error.
+   * @returns An HttpResponseInit object with a 400 status code and the provided error body.
+   */
+  createValidationError(body: unknown): HttpResponseInit {
     return this.createError(400, body)
   }
 
+  /**
+   * Generates an HTTP response with a 500 Internal Server Error status.
+   *
+   * @returns {HttpResponseInit} The HTTP response with a 500 status code and an error message.
+   */
   internalServerError(): HttpResponseInit {
     return this.createError(500, { error: 'Internal Server Error' })
   }
 
-  createError(status: number, body?: any): HttpResponseInit {
+  /**
+   * Creates an HTTP response with the specified status code and body.
+   *
+   * @param status - The status code of the response.
+   * @param body - The body of the response, typically containing error details.
+   * @returns An HttpResponseInit object with the provided status code and body.
+   */
+  createError(status: number, body?: unknown): HttpResponseInit {
     return {
       status: status,
       jsonBody: body ?? { error: 'An error occurred' },

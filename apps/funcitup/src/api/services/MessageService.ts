@@ -7,10 +7,7 @@ export class MessageService extends AzureFunctionService {
   @post('{id}/send', schemas.MessageRequest)
   @body<MessageBody>()
   @path('id')
-  public async send(
-    requestBody: MessageBody,
-    id: number
-  ) {
+  public async send(requestBody: MessageBody, id: number) {
     return {
       from: id,
       requestBosdy: requestBody,

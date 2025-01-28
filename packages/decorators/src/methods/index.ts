@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-function-type */
+
 import * as pathJoin from 'path'
 import { HTTP_METHOD, Service, Method, BaseService } from '../classes'
 
@@ -22,6 +24,7 @@ export const getAllServices = (): Service[] => {
 }
 
 export const getService = (
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   s: typeof BaseService<any, any, any>
 ): Service | undefined => {
   return getAllServices().find((service) => service.impl === s)
@@ -31,9 +34,7 @@ export const getService = (
  * Indicates that a class is a service that can be registered for service discovery.
  * @param service - The service to be tagged or annotated.
  */
-export type ServiceDecorator<T> = (
-  service: T
-) => T
+export type ServiceDecorator<T> = (service: T) => T
 
 /**
  * A type representing a method  decoration.
@@ -46,23 +47,27 @@ export type MethodDecorator = (
   context: ClassMethodDecoratorContext
 ) => void
 
-export type Constructor<T> = new () => T;
+export type Constructor<T> = new () => T
 
 /**
  * Holdd the values of the class method decorator.
- * 
+ *
  */
 export const service =
-  <T extends Constructor<BaseService<any, any, any>>>(path?: string, cors?: string): ServiceDecorator<T> =>
-  (target: T) => {
-    const localService = currentService
-    currentService = undefinedService
-    localService.path = path || target.name.toLowerCase()
-    localService.cors = cors
-    localService.name = target.name
-    localService.impl = target
-    return target
-  }
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  <T extends Constructor<BaseService<any, any, any>>>(
+      path?: string,
+      cors?: string
+    ): ServiceDecorator<T> =>
+    (target: T) => {
+      const localService = currentService
+      currentService = undefinedService
+      localService.path = path || target.name.toLowerCase()
+      localService.cors = cors
+      localService.name = target.name
+      localService.impl = target
+      return target
+    }
 
 /**
  * A method decoration for HTTP GET requests.
@@ -71,7 +76,7 @@ export const service =
  * @returns A Method decoration function that registers the method as a GET endpoint.
  */
 export const get =
-  (path?: string, schema?: any): MethodDecorator =>
+  (path?: string, schema?: unknown): MethodDecorator =>
   (target, context) => {
     createMethod(path || target.name, 'get', target, context, schema)
   }
@@ -83,7 +88,7 @@ export const get =
  * @returns A Method decoration function that registers the method as a POST endpoint.
  */
 export const post =
-  (path?: string, schema?: any): MethodDecorator =>
+  (path?: string, schema?: unknown): MethodDecorator =>
   (target, context) => {
     createMethod(path || target.name, 'post', target, context, schema)
   }
@@ -95,7 +100,7 @@ export const post =
  * @returns A method decoration function that registers the method with the specified path and HTTP method.
  */
 export const put =
-  (path?: string, schema?: any): MethodDecorator =>
+  (path?: string, schema?: unknown): MethodDecorator =>
   (target, context) => {
     createMethod(path || target.name, 'put', target, context, schema)
   }
@@ -105,13 +110,13 @@ const createMethod = (
   httpMethod: HTTP_METHOD,
   target: Function,
   context: ClassMethodDecoratorContext,
-  requestSchema?: any
+  requestSchema?: unknown
 ) => {
   if (context.kind === 'method') {
     if (currentService === undefinedService) {
       currentService = createService()
     }
-    let method = getMethod(target)
+    const method = getMethod(target)
     method.schema = { ...method?.schema, request: requestSchema }
     method.httpMethod = httpMethod
     method.path = pathJoin.join('/', path)

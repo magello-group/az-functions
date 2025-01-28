@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 export type ParameterType = 'body' | 'query' | 'path' | 'head'
 export type HTTP_METHOD = 'get' | 'post' | 'put' | 'delete' | 'options'
 
@@ -271,6 +273,7 @@ export class Method {
   /**
    * The function to be executed for the route.
    */
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
   func: Function
 
   /**
@@ -286,6 +289,7 @@ export class Method {
    * @param name - The name of the method.
    * @param func - The function to be executed for the route.
    */
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
   constructor(name: string, func: Function) {
     this.parameters = []
     this.name = name
@@ -312,9 +316,9 @@ export class Service {
  * BaseService class provides a base implementation for services with logging, request, and reply handling.
  */
 export class BaseService<
-  TLog extends Object,
-  TRequest extends Object,
-  TReply extends Object,
+  TLog extends object,
+  TRequest extends object,
+  TReply extends object,
 > {
   /**
    * Optional logger instance for logging purposes.
