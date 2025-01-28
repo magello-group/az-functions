@@ -1,8 +1,9 @@
 // generated file, do not edit
 
-import { Type, TSchema, CloneType } from '@sinclair/typebox'
+import { Type, Static, TSchema, CloneType } from '@sinclair/typebox'
 
-export const Request = Type.Object(
+export type ServiceRequest = Static<typeof ServiceRequest>
+export const ServiceRequest = Type.Object(
   {
     headers: Type.Record(Type.String(), Type.String(), {
       description: 'The headers of the request.',
@@ -31,10 +32,13 @@ export const Request = Type.Object(
   { interface: 'Request' }
 )
 
+export type PostRequest<T extends TSchema> = Static<
+  ReturnType<typeof PostRequest<T>>
+>
 export const PostRequest = <T extends TSchema>(T: T) =>
   Type.Composite(
     [
-      Request,
+      ServiceRequest,
       Type.Object({
         body: CloneType(T, { description: 'The body of the request.' }),
       }),
@@ -46,6 +50,7 @@ export const PostRequest = <T extends TSchema>(T: T) =>
     }
   )
 
+export type MessageBody = Static<typeof MessageBody>
 export const MessageBody = Type.Object(
   {
     to: Type.String({ description: 'The username of the sender' }),
@@ -58,6 +63,7 @@ export const MessageBody = Type.Object(
   { description: 'Represents the body of a message.' }
 )
 
+export type MessageRequest = Static<typeof MessageRequest>
 export const MessageRequest = Type.Composite(
   [
     PostRequest(MessageBody),
@@ -73,6 +79,7 @@ export const MessageRequest = Type.Composite(
   { description: 'Represents a request to post a message.' }
 )
 
+export type JoinBody = Static<typeof JoinBody>
 export const JoinBody = Type.Object(
   {
     username: Type.String({ description: 'The username of the user joining' }),
@@ -80,6 +87,7 @@ export const JoinBody = Type.Object(
   { description: 'Represents the body of a join request.' }
 )
 
+export type JoinRequest = Static<typeof JoinRequest>
 export const JoinRequest = Type.Composite(
   [
     PostRequest(JoinBody),
@@ -96,3 +104,30 @@ export const JoinRequest = Type.Composite(
   ],
   { description: 'Represents a request to join a channel.' }
 )
+
+export type StaticServiceRequest = Static<typeof StaticServiceRequest>
+export const StaticServiceRequest = Type.Composite([
+  ServiceRequest,
+  Type.Object({
+    params: Type.Object(
+      {
+        path: Type.String({ description: 'The path to the static resource' }),
+      },
+      { description: 'The path to the static resource' }
+    ),
+    headers: Type.Object(
+      {
+        'if-none-match': Type.Optional(
+          Type.String({
+            description:
+              'Optional header to specify the expected ETag of the resource.',
+          })
+        ),
+      },
+      {
+        description:
+          'Optional header to specify the expected ETag of the resource.',
+      }
+    ),
+  }),
+])

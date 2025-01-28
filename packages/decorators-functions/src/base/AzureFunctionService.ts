@@ -85,6 +85,9 @@ export class AzureFunctionService extends BaseService<
         cookies: [],
       }
       const response = await method.func.apply(this, args)
+      if (typeof response.status === 'number') {
+        return response
+      }
       if (response instanceof HttpResponse) {
         return response
       }

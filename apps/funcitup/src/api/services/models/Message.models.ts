@@ -1,36 +1,6 @@
-export * as schemas from './Message.schemas'
+import { PostRequest } from './Base.models'
 
-/**
- * Represents an HTTP request.
- *
- * @interface Request
- */
-export interface Request {
-  /**
-   * @description The headers of the request.
-   */
-  headers: Record<string, string>
-  /**
-   * @description The route parameters of the request.
-   */
-  params: Record<string, string[] | string | number | boolean>
-  /**
-   * @description The query parameters of the request.
-   */
-  query: Record<string, string[] | string | number | boolean>
-}
-
-/**
- * @description Interface representing a POST request with a generic body type.
- *
- * @template T - The type of the request body.
- */
-export interface PostRequest<T> extends Request {
-  /**
-   * @description The body of the request.
-   */
-  body: T
-}
+export * as schemas from '../../../shcemas/Schemas'
 
 /**
  * @description Represents the body of a message.

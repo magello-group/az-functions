@@ -40,52 +40,59 @@ program
         await fs.unlink(filename)
       })
       const filenames = await getModelFiles(root, '.models.ts')
-      filenames.forEach(async (filename: string) => {
+      const promises = filenames.map(async (filename: string) => {
         const filePath = path.resolve(process.cwd(), filename)
         const raw = await fs.readFile(filePath, 'utf-8')
-        let data = ''
-        if (options.json) {
-          data = Codegen.ModelToJsonSchema.Generate(
-            Codegen.TypeScriptToModel.Generate(raw)
-          )
-        } else {
-          data = Codegen.TypeScriptToTypeBox.Generate(raw, {
-            useExportEverything: false,
-          })
-          data = data
-            .split('\n')
-            .map((line: string) => {
-              if (options.removetypes) {
-                if (line.includes(', Static, ')) {
-                  return line.replace(', Static, ', ', ')
-                }
-                return line.includes('export type') ? '' : line
-              }
-              return line
-            })
-            .join('\n')
-        }
-        const outputFile = path.join(
-          path.join(path.dirname(filePath)),
-          `${path.basename(filename, path.extname(filename)).replace('.models', '.schemas')}.ts`
-        )
-        const output = await prettier.format(data, {
-          parser: 'typescript',
-          semi: false,
-          singleQuote: true,
-          tabWidth: 2,
-          trailingComma: 'es5',
-          printWidth: 80,
-        })
-        await fs.writeFile(
-          outputFile,
-          `// generated file, do not edit\n\n${output}`,
-          'utf-8'
-        )
 
-        const relativeOutputFile = path.relative(root, outputFile)
-        console.log(`Schema written to ${relativeOutputFile}`)
+        return raw
       })
+      const results = await Promise.all(promises)
+      const raw = results.join('\n')
+      let data = ''
+      if (options.json) {
+        data = Codegen.ModelToJsonSchema.Generate(
+          Codegen.TypeScriptToModel.Generate(raw)
+        )
+      } else {
+        data = Codegen.TypeScriptToTypeBox.Generate(raw, {
+          useExportEverything: false,
+        })
+      }
+      data = data
+        .split('\n')
+        .map((line: string) => {
+          if (options.removetypes) {
+            if (line.includes(', Static, ')) {
+              return line.replace(', Static, ', ', ')
+            } else if (line.includes(', Static }')) {
+              return line.replace(', Static }', ' }')
+            }
+            return line.includes('export type') ? '' : line
+          }
+          return line
+        })
+        .join('\n')
+      const filePath = `${path.join(root, 'shcemas', 'Schemas.ts')}`
+      await fs.mkdir(path.dirname(filePath), { recursive: true })
+      // path.join(
+      //   path.join(path.dirname(filePath)),
+      //   `${path.basename(filename, path.extname(filename)).replace('.models', '.schemas')}.ts`
+      // )
+      const output = await prettier.format(data, {
+        parser: 'typescript',
+        semi: false,
+        singleQuote: true,
+        tabWidth: 2,
+        trailingComma: 'es5',
+        printWidth: 80,
+      })
+      await fs.writeFile(
+        filePath,
+        `// generated file, do not edit\n\n${output}`,
+        'utf-8'
+      )
+
+      console.log(`Schema written to ${path.relative(root, filePath)}`)
     } catch (error) {
       console.error('Error:', error)
     }
