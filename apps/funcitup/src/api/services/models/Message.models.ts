@@ -2,6 +2,24 @@ import { PostRequest } from './Base.models'
 
 export * as schemas from '../../../shcemas/Schemas'
 
+export type Message = {
+  role: 'system' | 'user' | 'assistant'
+  content: string
+}
+
+export interface ChatQuestion {
+  messages: Message[]
+}
+
+export interface ChatMessage extends PostRequest<ChatQuestion> {
+  query: {
+    /**
+     * @description The option to use for the chat
+     */
+    option?: 'openai' | 'deepseek' | null
+  }
+}
+
 /**
  * @description Represents the body of a message.
  */

@@ -23,15 +23,20 @@
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
     "decorators": "workspace:^",
-    "decorators-functions": "workspace:^"
+    "decorators-functions": "workspace:^",
+    "natural": "^8.0.1"
   },
   "devDependencies": {
+    "@types/html-to-text": "^9.0.4",
     "@types/jest": "^29.5.14",
     "@types/node": "18.x",
+    "@types/pdf-parse": "^1.1.4",
     "azure-functions-core-tools": "^4.x",
     "esbuild": "^0.24.2",
     "globals": "^15.14.0",
+    "html-to-text": "^9.0.5",
     "jest": "^29.7.0",
+    "pdf-parse": "^1.1.1",
     "rimraf": "^5.0.0",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",

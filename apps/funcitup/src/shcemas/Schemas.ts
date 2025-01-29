@@ -1,8 +1,7 @@
 // generated file, do not edit
 
-import { Type, Static, TSchema, CloneType } from '@sinclair/typebox'
+import { Type, TSchema, CloneType } from '@sinclair/typebox'
 
-export type ServiceRequest = Static<typeof ServiceRequest>
 export const ServiceRequest = Type.Object(
   {
     headers: Type.Record(Type.String(), Type.String(), {
@@ -15,6 +14,7 @@ export const ServiceRequest = Type.Object(
         Type.String(),
         Type.Number(),
         Type.Boolean(),
+        Type.Null(),
       ]),
       { description: 'The route parameters of the request.' }
     ),
@@ -25,6 +25,7 @@ export const ServiceRequest = Type.Object(
         Type.String(),
         Type.Number(),
         Type.Boolean(),
+        Type.Null(),
       ]),
       { description: 'The query parameters of the request.' }
     ),
@@ -32,9 +33,6 @@ export const ServiceRequest = Type.Object(
   { interface: 'Request' }
 )
 
-export type PostRequest<T extends TSchema> = Static<
-  ReturnType<typeof PostRequest<T>>
->
 export const PostRequest = <T extends TSchema>(T: T) =>
   Type.Composite(
     [
@@ -50,7 +48,36 @@ export const PostRequest = <T extends TSchema>(T: T) =>
     }
   )
 
-export type MessageBody = Static<typeof MessageBody>
+export const Message = Type.Object({
+  role: Type.Union([
+    Type.Literal('system'),
+    Type.Literal('user'),
+    Type.Literal('assistant'),
+  ]),
+  content: Type.String(),
+})
+
+export const ChatQuestion = Type.Object({
+  messages: Type.Array(Message),
+})
+
+export const ChatMessage = Type.Composite([
+  PostRequest(ChatQuestion),
+  Type.Object({
+    query: Type.Object(
+      {
+        option: Type.Optional(
+          Type.Union(
+            [Type.Literal('openai'), Type.Literal('deepseek'), Type.Null()],
+            { description: 'The option to use for the chat' }
+          )
+        ),
+      },
+      { description: 'The option to use for the chat' }
+    ),
+  }),
+])
+
 export const MessageBody = Type.Object(
   {
     to: Type.String({ description: 'The username of the sender' }),
@@ -63,7 +90,6 @@ export const MessageBody = Type.Object(
   { description: 'Represents the body of a message.' }
 )
 
-export type MessageRequest = Static<typeof MessageRequest>
 export const MessageRequest = Type.Composite(
   [
     PostRequest(MessageBody),
@@ -79,7 +105,6 @@ export const MessageRequest = Type.Composite(
   { description: 'Represents a request to post a message.' }
 )
 
-export type JoinBody = Static<typeof JoinBody>
 export const JoinBody = Type.Object(
   {
     username: Type.String({ description: 'The username of the user joining' }),
@@ -87,7 +112,6 @@ export const JoinBody = Type.Object(
   { description: 'Represents the body of a join request.' }
 )
 
-export type JoinRequest = Static<typeof JoinRequest>
 export const JoinRequest = Type.Composite(
   [
     PostRequest(JoinBody),
@@ -105,7 +129,6 @@ export const JoinRequest = Type.Composite(
   { description: 'Represents a request to join a channel.' }
 )
 
-export type StaticServiceRequest = Static<typeof StaticServiceRequest>
 export const StaticServiceRequest = Type.Composite([
   ServiceRequest,
   Type.Object({

@@ -1,0 +1,101 @@
+Free cookie consent management tool by TermsFeed
+
+ 1. Hem
+ 2. Case
+ 3. Poster
+ 4. ICA
+
+SÅ ÖKADE VI ICAS AFFÄRSNYTTA VIA ETT PLATTFORMSBYTE TILL AZURE KUBERNETES
+
+ICA är ett innovativt företag som ständigt utvecklar sina IT-lösningar för att
+öka affärsnyttan och förbättra kundupplevelsen. I ett av deras senaste projekt
+fick Magello möjligheten att bidra med både nyutveckling och plattformslyftande
+insatser. Här beskriver vi projektets mål, de tekniska utmaningarna och
+resultaten av vårt arbete.
+
+UTMANING
+
+Huvudmålet med projektet var att förflytta ICA från Azure Service Fabric till
+Azure Kubernetes. Detta innebar även att migrera data från Azure DevOps och
+GitLab till GitHub. Kraven omfattade bland annat ToGo-appen, som möjliggör
+obemannad handel i vissa butiker, samt ett dashboard för butikshandlare som
+visar bland annat kundvarv.
+
+En stor del av utmaningen var att säkerställa prestanda och skalbarhet i takt
+med att fler butiker gick live. Dessutom ställdes krav på att integrera Bank-ID
+med stöd för de nya reglerna kring rörliga QR-koder, vilket krävde anpassningar
+i backend-tjänsterna.
+
+LÖSNING
+
+Teamet bestod av fyra backendutvecklare, fyra frontend- och apputvecklare samt
+två produktägare och arbetade brett med nyutveckling, kravställning, testning
+och design.
+
+För att möta projektets behov användes tekniker som .NET, React, Azure, Redis
+cache, meddelandeköer, MS SQL Server och Cosmos DB. För Bank-ID-anpassningarna
+byggdes backend-tjänster om så att de kunde stödja både rörlig QR-kod och
+autostart. Arbetet organiserades via boards i Azure DevOps, utan fasta sprintar
+eller timeboxing, vilket möjliggjorde ett mer flytande arbetssätt.
+
+RESULTAT
+
+Projektet resulterade i en framgångsrik övergång till Azure Kubernetes, vilket
+har förbättrat både prestanda och skalbarhet för ICA:s system. ToGo-appen har
+skapat nya affärsmöjligheter genom att göra det möjligt att sälja i områden som
+tidigare inte täckts, och migreringen till GitHub har effektiviserat samarbetet
+mellan ICA:s avdelningar. 
+
+Den nya plattformen stärker ICA:s position som ett innovativt företag och
+förbättrar både kundupplevelse och intern effektivitet.
+
+INFORMATION OM PROJEKTET
+
+Lansering 1 januari 2024
+Nyckelord
+React Microsoft Azure Azure Service Fabric Azure Kubernetes Services DevOps Git
+Back-end Front-end Apputvecklare Kravhantering Cache MS SQL Server Cosmos DB
+Sprint React Native DotNET
+Relaterade inlägg
+Så ökade vi ICAs affärsnytta via ett plattformsbyte till Azure Kubernetes
+
+FLER CASE
+
+LÄS MER
+
+Moverot
+
+APPEN SOM GÖR FRISKVÅRD ENKELT OCH ROLIGT
+
+LÄS MER
+
+Lomeko
+
+EN WEBBPLATS SOM ERBJUDER EKONOMISTYRNING OCH REDOVISNING
+
+LÄS MER
+
+Suicide Zero
+
+VISUELLT LYFT OCH ÖKAD TILLGÄNGLIGHET FÖR SUICIDE ZEROS NYA WEBBPLATS
+
+INTRESSERAD AV VAD EN APP KAN KOSTA?
+
+Med vår kostnadskalkylator kan du få ett ungefärligt pris på vad din app eller
+webbsida skulle kunna kosta.
+
+SÖK PÅ MAGELLO
+
+Sök
+
+SIGN IN
+
+Don't have an account? Register now.
+
+SIGN IN
+
+REGISTER
+
+Have an account? Sign In.
+
+REGISTER
