@@ -27,6 +27,8 @@ OLD-es-lint-rc.js
 # Local python packages
 .python_packages/
 
+.DS_Store
+
 # Python Environments
 .env
 .venv
