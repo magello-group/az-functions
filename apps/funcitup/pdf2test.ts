@@ -122,7 +122,7 @@ async function addAllTxtFiles(directoryPath: string) {
 
   const jsonFilepath = path.join('src/documents', 'documents.json')
   await fs.writeFile(jsonFilepath, doc.serialize())
-  const question = 'Vem är VD på magello?'
+  const question = 'Har magello kollektivavtal??'
   console.log(
     '======HELLO=======',
     natural.PorterStemmerSv.tokenizeAndStem(question)
@@ -136,10 +136,9 @@ async function addAllTxtFiles(directoryPath: string) {
   return doc
 }
 
-convertAllHtmlFilesInDirectory('./files/txt')
-  .then(() => convertAllPdfsInDirectory('./files/pdf'))
-  .then(() => addAllTxtFiles('./files/txt'))
-  .catch(console.error)
-
-// addAllTxtFiles('./files/txt')
+// convertAllHtmlFilesInDirectory('./files/txt')
+//   .then(() => convertAllPdfsInDirectory('./files/pdf'))
+//   .then(() => addAllTxtFiles('./files/txt'))
 //   .catch(console.error)
+
+addAllTxtFiles('./files/txt').catch(console.error)

@@ -359,8 +359,8 @@ https://ssoservice.agdadrift.se/AGDASSO/IdpExpress/Account/Login
 • Benify (Förmånsportal och friskvård)  
 https://www.benify.com/fps/wspr/e/r/publicSite/view/se  
   
-• Milltime (Tidrapportering)  
-https://tidrapport.magello.se   
+• Kleer (Tidrapportering)  
+https://kleer.se   
  
 • Cinode (Konsult-CV)  
 https://app.cinode.com/  

@@ -697,14 +697,14 @@ gäller bildskärmsglasögon och att de är anpassade för ett arbetsavstånd p�
 Du bokar synundersökningar via förmånsportalen, där finns de 
 optikerkedjorna som Magello har avtal med representerade.  
 TIDRAPPORTERING 
-För tidrapportering används Milltime. I Milltime rapporterar du all tid, både 
+För tidrapportering används Kleer. I Kleer rapporterar du all tid, både 
 debiterbar och odebiterbar. Tiden fördelas på olika kunder, projekt och roller. I 
-Milltime registreras också beredskap, etableringstillägg etc. Saknas något 
+Kleer registreras också beredskap, etableringstillägg etc. Saknas något 
 projekt som du ska lägga tid på så hör av dig till din chef. 
 Utgångspunkten är att du arbetar 40h per vecka (om inte överenskommelse 
 om deltidsarbete har gjorts). Du har ett flextidskonto, för konsulter kundtid, i 
-Milltime där maximal flextid är 16 timmar i mertid/undertid. Flextid hanteras 
-automatiskt av Milltime om du rapporterar fler eller färre än 8 timmar en 
+Kleer där maximal flextid är 16 timmar i mertid/undertid. Flextid hanteras 
+automatiskt av Kleer om du rapporterar fler eller färre än 8 timmar en 
 arbetsdag. 
 Tidrapporteringen ska göras senast sista arbetsdagen vid månadsskifte. När 
 du är klar så ska du låsa din tidrapport som därefter attesteras av din chef. 
@@ -766,7 +766,7 @@ Möte med TL/KC”
 ”Magello – Mellan uppdrag” 
 • För aktiviteter inom sälj, rekrytering etc sätts specifika projekt 
 upp. Exempelvis ”Magello – Presale” och ”Magello – Rekrytering” 
-Normalt kan du se följande projekt i Milltime: 
+Normalt kan du se följande projekt i Kleer: 
 • Kundprojekt med underkategorier 
 • ”Magello – Lärande” med följande aktiviteter  
 o Individuell utvecklingstid 

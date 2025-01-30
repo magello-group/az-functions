@@ -1,173 +1,284 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chat Page with Message Bubbles</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
 
-      body {
-        display: flex;
-        min-height: 100vh;
-        font-family: 'Arial', sans-serif;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat Page with Message Bubbles</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      .menu {
-        width: 200px;
-        background-color: #f4f4f4;
-        border-right: 1px solid #ddd;
-        padding: 20px;
-      }
+    body {
+      display: flex;
+      min-height: 100vh;
+      font-family: 'Arial', sans-serif;
+    }
 
-      .menu a {
-        display: block;
-        padding: 10px;
-        text-decoration: none;
-        color: #333;
-        margin-bottom: 10px;
-        border-radius: 4px;
-      }
+    .menu {
+      width: 200px;
+      background-color: #f4f4f4;
+      border-right: 1px solid #ddd;
+      padding: 20px;
+    }
 
-      .menu a:hover {
-        background-color: #ddd;
-      }
+    .menu a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #333;
+      margin-bottom: 10px;
+      border-radius: 4px;
+    }
 
-      .chat-container {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-      }
+    .menu a:hover {
+      background-color: #ddd;
+    }
 
-      .chat-history {
-        flex: 1;
-        padding: 20px;
-        overflow-y: auto;
-        background-color: #fafafa;
-        border-bottom: 1px solid #ddd;
-      }
+    .chat-container {
+      position: absolute;
+      display: block;
+      overflow-y: auto;
+      bottom: 60px;
+      left: 200px;
+      right: 0;
+      top: 0;
+    }
 
-      .chat-message-wrapper {
-        display: flex;
-        margin-bottom: 10px;
-      }
+    .chat-history {
+      flex: 1;
+      padding: 20px;
+      background-color: #fafafa;
+      border-bottom: 1px solid #ddd;
+    }
 
-      .received {
-        justify-content: flex-start;
-      }
+    .chat-message-wrapper {
+      display: flex;
+      margin-bottom: 10px;
+    }
 
-      .sent {
-        justify-content: flex-end;
-      }
+    .received {
+      justify-content: flex-start;
+    }
 
-      .chat-message {
-        max-width: 70%;
-        padding: 10px 15px;
-        border-radius: 15px;
-        word-wrap: break-word;
-      }
+    .sent {
+      justify-content: flex-end;
+    }
 
-      .chat-message.received {
-        background-color: #e0e0e0;
-        align-self: flex-start;
-      }
+    .chat-message {
+      max-width: 70%;
+      padding: 10px 15px;
+      border-radius: 15px;
+      word-wrap: break-word;
+    }
 
-      .chat-message.sent {
-        background-color: #007bff;
-        color: white;
-        align-self: flex-end;
-      }
+    .chat-message.received {
+      background-color: #e0e0e0;
+      align-self: flex-start;
+    }
 
-      .chat-input-wrapper {
-        display: flex;
-        padding: 10px;
-        background-color: #f4f4f4;
-        border-top: 1px solid #ddd;
-      }
+    .chat-message.sent {
+      background-color: #007bff;
+      color: white;
+      align-self: flex-end;
+    }
 
-      .chat-input {
-        flex: 1;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 16px;
-      }
+    .chat-input-wrapper {
+      display: flex;
+      padding: 10px;
+      background-color: #f4f4f4;
+      border-top: 1px solid #ddd;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      left: 200px;
+    }
+    .chat-input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
 
-      .send-btn {
-        background-color: #007bff;
-        color: white;
-        padding: 10px 15px;
-        margin-left: 10px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-      }
+    .send-btn {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 15px;
+      margin-left: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
 
-      .send-btn:hover {
-        background-color: #0056b3;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="menu">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-      <a href="#">Help</a>
-    </div>
+    .send-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
 
+<body>
+  <div class="menu">
+    <a href="#">Hem</a>
+    <a href="#">Om oss</a>
+    <a href="#">Kontakt</a>
+    <a href="#">Hjälp</a>
+  </div>
+  <div style="display: flex; flex: 1; flex-direction: column;">
     <div class="chat-container">
       <div class="chat-history" id="chat-history">
         <div class="chat-message-wrapper">
-          <div class="chat-message">Hello! How can I help you today?</div>
-        </div>
-        <div class="chat-message-wrapper sent">
-          <div class="chat-message sent">
-            Hi! I have a question about your services.
-          </div>
-        </div>
-        <div class="chat-message-wrapper">
-          <div class="chat-message">Sure! What would you like to know?</div>
+          <div class="chat-message">Hej! Hur kan jag hjälpa dig idag?</div>
         </div>
       </div>
-
       <div class="chat-input-wrapper">
-        <input
-          type="text"
-          id="chat-input"
-          class="chat-input"
-          placeholder="Type a message..."
-        />
+        <input type="text" id="chat-input" class="chat-input" placeholder="Type a message..." />
         <button class="send-btn" onclick="sendMessage()">Send</button>
       </div>
     </div>
-
-    <script>
-      function sendMessage() {
-        const inputField = document.getElementById('chat-input')
-        const message = inputField.value.trim()
-        if (message) {
-          const chatHistory = document.getElementById('chat-history')
-
-          // Create wrapper for message
-          const messageWrapper = document.createElement('div')
-          messageWrapper.classList.add('chat-message-wrapper', 'sent')
-
-          const messageDiv = document.createElement('div')
-          messageDiv.classList.add('chat-message', 'sent')
-          messageDiv.textContent = message
-
-          messageWrapper.appendChild(messageDiv)
-          chatHistory.appendChild(messageWrapper)
-
-          chatHistory.scrollTop = chatHistory.scrollHeight
-          inputField.value = ''
-        }
+  </div>
+  <script>
+    const userHistory = [
+      {
+        role: 'system',
+        content:
+          'Du är en hjälpfull assistent som svarar på frågor från anställda om bolaget Magello Group AB med hjälp av RAG som bifogas tillsammas med frågan',
+      },
+      {
+        role: 'user',
+        content: 'Vem är CFO?',
       }
-    </script>
-  </body>
+    ]
+    const htmlEncode = (content) => {
+      const t = document.createElement('textarea')
+      t.textContent = content
+      return t.innerHTML
+    }
+    const markupate = (text) => 
+      text.replace(/\*\*(.*?)\*\*/g, "<b>$1</b>")
+        .replace(/__(.*?)__/g, "<u>$1</u>")
+        .replace(/`(.*?)`/g, "<pre>$1</pre>")
+        .replace(/~~(.*?)~~/g, "<i>$1</i>")
+        .replace(/--(.*?)--/g, "<del>$1</del>")
+        .replace(/<<(.*?)>>/g, "<a href='$1'>Link</a>")
+        .replace(/###### (.*?)\n/g, "<h6>$1</h6>")
+        .replace(/##### (.*?)\n/g, "<h5>$1</h5>")
+        .replace(/#### (.*?)\n/g, "<h4>$1</h4>")
+        .replace(/### (.*?)\n/g, "<h3>$1</h3>")
+        .replace(/## (.*?)\n/g, "<h2>$1</h2>")
+        .replace(/# (.*?)\n/g, "<h1>$1</h1>")
+        .replace(/\n/g, '<br />')
+    
+    const fetchQuestion = async (question, callback) => {
+      try {
+        const response = await fetch('/api/messages/deepseek/stream', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(question)
+        });
+        if (!response.ok) {
+          let errorMessage = 'Sorry, I\'m not available right now. Please try again later.';
+
+          if (response.status >= 400 && response.status < 500) {
+            errorMessage = 'Client error occurred. Please check your request and try again.';
+          } else if (response.status >= 500) {
+            errorMessage = 'Server error occurred. Please try again later.';
+          }
+          throw new Error(errorMessage);
+        }
+        const reader = response.body?.getReader();
+        const decoder = new TextDecoder();
+        let fetchBuffer = '';
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) {
+            break;
+          }
+          fetchBuffer += decoder.decode(value, { stream: true });
+          // Process each line
+          let lines = fetchBuffer.split('\n\n');
+          fetchBuffer = lines.pop(); // Keep the last incomplete line in the buffer
+          for (const line of lines) {
+            if (line.trim()) {
+              if (line.includes('data: [DONE]')) {
+                callback(null);
+                return;
+              } else if (line.startsWith(':')) {
+                continue
+              }
+              const data = JSON.parse(line.replace(/^data: /, ''));
+              callback(data);
+              // Process the chunk (e.g., update the UI)
+            }
+          }
+        }
+      } catch (error) {
+        throw error
+      }
+    }
+    function sendMessage() {
+      const inputField = document.getElementById('chat-input')
+      const message = inputField.value.trim()
+      if (message) {
+        const chatHistory = document.getElementById('chat-history')
+
+        // Create wrapper for message
+        const messageWrapper = document.createElement('div')
+        messageWrapper.classList.add('chat-message-wrapper', 'sent')
+
+        const messageDiv = document.createElement('div')
+        messageDiv.classList.add('chat-message', 'sent')
+        messageDiv.textContent = message
+
+        messageWrapper.appendChild(messageDiv)
+        chatHistory.appendChild(messageWrapper)
+
+        chatHistory.scrollTop = chatHistory.scrollHeight
+        inputField.value = ''
+
+        // Send message to server
+        userHistory.push({
+          role: 'user',
+          content: htmlEncode(message)
+        })
+
+        const answerWrapper = document.createElement('div')
+        answerWrapper.classList.add('chat-message-wrapper')
+
+        const answerDiv = document.createElement('div')
+        answerDiv.classList.add('chat-message')
+        // messageDiv.innerHTML = markupate(data.message)
+
+        answerWrapper.appendChild(answerDiv)
+        chatHistory.appendChild(answerWrapper)
+
+        let buffer = '';
+        fetchQuestion({ messages: userHistory }, (data) => {
+          if (data) {
+            buffer += data.delta.content
+            answerDiv.innerHTML = markupate(buffer)
+                    // Create wrapper for message
+
+            chatHistory.scrollTop = chatHistory.scrollHeight
+          } else {
+            userHistory.push({
+              role: 'assistant',
+              content: buffer
+            })
+            buffer = ''
+          }
+        }).catch((error) => {
+          console.error(error)
+          answerWrapper.innerHTML = error.message
+        })
+      }
+    }
+  </script>
+</body>
+
 </html>

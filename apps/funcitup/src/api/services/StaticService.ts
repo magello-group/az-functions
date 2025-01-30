@@ -15,7 +15,7 @@ type Response = {
 export class StaticService extends AzureFunctionService {
   @get('{*path}', schemas.StaticServiceRequest)
   @path('path')
-  @head('if-none-match')
+  @head('if-none-match', null)
   async getStaticFile(path: string, etag?: string): Promise<Response> {
     const filePath = join(process.cwd(), 'public', path)
     try {
@@ -32,12 +32,12 @@ export class StaticService extends AzureFunctionService {
       }
       return {
         status: 200,
-        body: fileContent,
         headers: {
           'Content-Type': this.getContentType(filePath),
           'Cache-Control': 'public, max-age=3600',
           ETag: `W/${hash}`,
         },
+        body: fileContent,
       }
     } catch (error) {
       this.log?.error(error)
