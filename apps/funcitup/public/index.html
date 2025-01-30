@@ -122,10 +122,17 @@
 
 <body>
   <div class="menu">
-    <a href="#">Hem</a>
-    <a href="#">Om oss</a>
-    <a href="#">Kontakt</a>
-    <a href="#">Hjälp</a>
+    Välj AI Assistent
+    <label style="display: block;" onclick="setModel('deepseek')">
+      <input type="radio" name="ai-assistant" value="deepseek-chat" checked>
+      DeepSeek
+      <small>(deepseek-chat)</small>
+    </label>
+    <label style="display: block;" onclick="setModel('openai')">
+      <input type="radio" name="ai-assistant" value="gpt-4o-mini">
+      OpenAI
+      <small>(gpt-4o-mini)</small>
+    </label>
   </div>
   <div style="display: flex; flex: 1; flex-direction: column;">
     <div class="chat-container">
@@ -146,10 +153,6 @@
         role: 'system',
         content:
           'Du är en hjälpfull assistent som svarar på frågor från anställda om bolaget Magello Group AB med hjälp av RAG som bifogas tillsammas med frågan',
-      },
-      {
-        role: 'user',
-        content: 'Vem är CFO?',
       }
     ]
     const htmlEncode = (content) => {
@@ -163,7 +166,7 @@
         .replace(/`(.*?)`/g, "<pre>$1</pre>")
         .replace(/~~(.*?)~~/g, "<i>$1</i>")
         .replace(/--(.*?)--/g, "<del>$1</del>")
-        .replace(/<<(.*?)>>/g, "<a href='$1'>Link</a>")
+        .replace(/\[(.*?)\]\((.*?)\)/g, "<a target='_blank' href='$2'>$1</a>")
         .replace(/###### (.*?)\n/g, "<h6>$1</h6>")
         .replace(/##### (.*?)\n/g, "<h5>$1</h5>")
         .replace(/#### (.*?)\n/g, "<h4>$1</h4>")
@@ -171,10 +174,13 @@
         .replace(/## (.*?)\n/g, "<h2>$1</h2>")
         .replace(/# (.*?)\n/g, "<h1>$1</h1>")
         .replace(/\n/g, '<br />')
-    
+    let model = 'deepseek'
+    const setModel = (value) => {
+      model = value
+    }
     const fetchQuestion = async (question, callback) => {
       try {
-        const response = await fetch('/api/messages/deepseek/stream', {
+        const response = await fetch(`/api/messages/${model}/stream`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -226,6 +232,7 @@
       const message = inputField.value.trim()
       if (message) {
         const chatHistory = document.getElementById('chat-history')
+        const chatContainer = document.querySelector('.chat-container')
 
         // Create wrapper for message
         const messageWrapper = document.createElement('div')
@@ -238,7 +245,7 @@
         messageWrapper.appendChild(messageDiv)
         chatHistory.appendChild(messageWrapper)
 
-        chatHistory.scrollTop = chatHistory.scrollHeight
+        // chatHistory.scrollTop = chatHistory.scrollHeight;
         inputField.value = ''
 
         // Send message to server
@@ -256,15 +263,14 @@
 
         answerWrapper.appendChild(answerDiv)
         chatHistory.appendChild(answerWrapper)
+        chatContainer.scrollTop = chatContainer.scrollHeight;
 
         let buffer = '';
         fetchQuestion({ messages: userHistory }, (data) => {
           if (data) {
             buffer += data.delta.content
             answerDiv.innerHTML = markupate(buffer)
-                    // Create wrapper for message
-
-            chatHistory.scrollTop = chatHistory.scrollHeight
+            chatContainer.scrollTop = chatContainer.scrollHeight;
           } else {
             userHistory.push({
               role: 'assistant',
