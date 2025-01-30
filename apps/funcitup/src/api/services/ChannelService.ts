@@ -6,7 +6,7 @@ import { AzureFunctionService } from 'decorators-functions'
 export class ChannelService extends AzureFunctionService {
   @get('list')
   public async list() {
-    return [`${process.version} - Hello Wxorld`]
+    return ['general', 'random', 'dev']
   }
 
   @post('{channel}/join', schemas.JoinRequest)

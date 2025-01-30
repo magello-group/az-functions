@@ -15,7 +15,7 @@ export class MessageService extends AzureFunctionService {
     const request = {
       model: model,
       messages: question.messages,
-      temperature: 0.7,
+      temperature: 0.5,
       stream: false, // Request a streamed response
     }
     const response = await fetch(url, {

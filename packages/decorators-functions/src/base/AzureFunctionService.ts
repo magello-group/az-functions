@@ -20,6 +20,10 @@ import {
   util,
 } from 'decorators'
 
+// const myOutput = output.storageBlob({
+//   path: 'outputBlob',
+//   connection: 'AzureWebJobsStorage',
+// })
 // export function azureFunction<T extends new () => T>(path?: string, cors?: string) {
 //   return (target: T) => {
 //     const n = {
@@ -191,8 +195,10 @@ export const addHttpFunction = (serviceClass: typeof AzureFunctionService) => {
       const trigger = `${util.capitalize(service.name, '_', method.name)}`
       app.http(trigger, {
         methods: [method.httpMethod.toUpperCase() as HttpMethod],
+        // extraOutputs: [myOutput],
         authLevel: 'anonymous',
         handler: async (req, context) => {
+          // context.extraOutputs.get(myOutput)
           return new serviceClass().handleRequest(
             req,
             context,
