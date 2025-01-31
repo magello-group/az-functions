@@ -1,13 +1,12 @@
-# Azure Functions Project
+# Azure Functions Example Project
 
 This project contains Azure Functions for various tasks.
 
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
-- [Getting Started](#getting-started)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
+  - [Install pnpm](#install-pnpm)
 - [Usage](#usage)
 - [Functions](#functions)
 - [Contributing](#contributing)
