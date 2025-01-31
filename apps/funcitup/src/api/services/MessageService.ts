@@ -138,7 +138,6 @@ export class MessageService extends AzureFunctionService {
               .map((c, i) => `${i + 1}. (${c.source}) ${c.content}`)
               .join('\n'),
         }
-        this.log?.info(msg.content)
         question.messages.push(msg)
       }
       question.messages.push(lastUserMessage)

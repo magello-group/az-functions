@@ -167,15 +167,15 @@
 <body>
   <div class="menu">
     Välj AI Assistent
-    <label style="display: block;" onclick="setModel('deepseek')">
-      <input type="radio" name="ai-assistant" value="deepseek-chat" checked>
-      DeepSeek
-      <small>(deepseek-chat)</small>
-    </label>
     <label style="display: block;" onclick="setModel('openai')">
-      <input type="radio" name="ai-assistant" value="gpt-4o-mini">
+      <input type="radio" name="ai-assistant" value="gpt-4o-mini" checked>
       OpenAI
       <small>(gpt-4o-mini)</small>
+    </label>
+    <label style="display: block;" onclick="setModel('deepseek')">
+      <input type="radio" name="ai-assistant" value="deepseek-chat">
+      DeepSeek
+      <small>(deepseek-chat)</small>
     </label>
   </div>
   <div style="display: flex; flex: 1; flex-direction: column;">
@@ -231,7 +231,7 @@
         .replace(/## (.*?)\n/g, "<h2>$1</h2>")
         .replace(/# (.*?)\n/g, "<h1>$1</h1>")
         .replace(/\n/g, '<br />')
-    let model = 'deepseek'
+    let model = 'openai'
     const setModel = (value) => {
       model = value
     }
