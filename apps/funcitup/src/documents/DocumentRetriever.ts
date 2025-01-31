@@ -32,8 +32,7 @@ class DocumentRetriever {
   }
 
   private splitDocument(content: string): string[] {
-    const words = content.split(/\s+/)
-
+    const words = content.split(' ').filter((word) => word.length > 0)
     const chunks: string[] = []
     for (let i = 0; i < words.length; i += this.chunkSize - this.overlap) {
       chunks.push(words.slice(i, i + this.chunkSize).join(' '))
@@ -44,6 +43,8 @@ class DocumentRetriever {
   private processText(content: string): string {
     // const words = content.split(/\s+/)
     const processedWords = natural.PorterStemmerSv.tokenizeAndStem(content)
+      // We don't want to stem the word 'magello' as it is a brand name
+      .filter((word) => word.toLowerCase() !== 'magello')
     // .filter((word) => !this.isStopWord(word))
     // .map((word) => this.stem(word))
     return processedWords.join(' ')

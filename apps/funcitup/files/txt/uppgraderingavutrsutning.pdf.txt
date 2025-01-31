@@ -1,7 +1,4 @@
-Författare: Anders Fredén 
-Datum: 2019-12-12 
-  R2M Group AB  |  Org nr: 556531-7129  |  Box 823 SE-101 36 Stockholm 
-Besöksadress: Klarabergsviadukten 90C 5tr  |  08-633 13 00  |  info@r2m.se  |  www.r2m.se 
+
  
 R2M
 Policy för personlig uppgradering av 
@@ -45,11 +42,6 @@ leverans.
  - Om det bedöms att en extra kraftfull dator behövs kan man komma överens om att köpa det och 
 då får man istället använda samma dator i fyra år. 
 --- PAGE BREAK ---
-
-Författare: Anders Fredén 
-Datum: 2019-12-12 
-  R2M Group AB  |  Org nr: 556531-7129  |  Box 823 SE-101 36 Stockholm 
-Besöksadress: Klarabergsviadukten 90C 5tr  |  08-633 13 00  |  info@r2m.se  |  www.r2m.se 
  
 R2M
  - Telefoner skall ligga i nivå eller under gällande modell av Samsung Galaxy S alternativt iPhone, det 

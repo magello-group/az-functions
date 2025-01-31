@@ -1,5 +1,5 @@
 import { post, service, body, path } from 'decorators'
-import { ChatQuestion, schemas } from './models/Message.models'
+import { ChatQuestion, Message, schemas } from './models/Message.models'
 import { AzureFunctionService } from 'decorators-functions'
 import { queryDocument } from '../../documents/QueryDocuments'
 
@@ -15,7 +15,7 @@ export class MessageService extends AzureFunctionService {
     const request = {
       model: model,
       messages: question.messages,
-      temperature: 0.5,
+      temperature: 0.4,
       stream: false, // Request a streamed response
     }
     const response = await fetch(url, {
@@ -40,7 +40,7 @@ export class MessageService extends AzureFunctionService {
     const request = {
       model: model,
       messages: question.messages,
-      temperature: 0.5,
+      temperature: 0.4,
       stream: true, // Request a streamed response
     }
     const response = await fetch(url, {
@@ -129,7 +129,7 @@ export class MessageService extends AzureFunctionService {
       const context = queryDocument(lastUserMessage.content)
       // Add RAG context to the question
       if (context.length > 0) {
-        question.messages.push({
+        const msg: Message = {
           role: 'assistant',
           content:
             'Här är externt hämtade utdrag ur dokument som kontext för att hjälpa ' +
@@ -137,7 +137,9 @@ export class MessageService extends AzureFunctionService {
             context
               .map((c, i) => `${i + 1}. (${c.source}) ${c.content}`)
               .join('\n'),
-        })
+        }
+        this.log?.info(msg.content)
+        question.messages.push(msg)
       }
       question.messages.push(lastUserMessage)
     }

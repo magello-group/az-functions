@@ -122,16 +122,17 @@ async function addAllTxtFiles(directoryPath: string) {
 
   const jsonFilepath = path.join('src/documents', 'documents.json')
   await fs.writeFile(jsonFilepath, doc.serialize())
-  const question = 'Har magello kollektivavtal??'
+  const question = 'Vilka sitter i ledningen?'
   console.log(
     '======HELLO=======',
     natural.PorterStemmerSv.tokenizeAndStem(question)
   )
   console.log('Question:', question)
-  doc.retrieve(question, 5).forEach((result) => {
-    console.log('Source:', result.source)
+  doc.retrieve(question, 5).forEach((result, i) => {
     console.log('Matched:', result.content)
+    console.log('Source:', result.source)
     console.log('Score:', result.score)
+    console.log(i)
   })
   return doc
 }
