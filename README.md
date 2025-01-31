@@ -79,7 +79,7 @@ Functions:
 1. ChannelService_List: [GET] http://localhost:7071/api/channels/list # Just for testing
 1. MessageService_Send: [POST] http://localhost:7071/api/messages/{option}/send # Returns the whole answer from API
 1. MessageService_Stream: [POST] http://localhost:7071/api/messages/{option}/stream # Streams the answer using text/event-stream
-1. StaticService_GetStaticFile: [GET] http://localhost:7071/api/public/{\*path} # Servers index.html
+1. StaticService_GetStaticFile: [GET] http://localhost:7071/api/public/{\*path} # Serves index.html
 
 ## Contributing
 
