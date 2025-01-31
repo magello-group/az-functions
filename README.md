@@ -9,8 +9,6 @@ This project contains Azure Functions for various tasks.
   - [Install pnpm](#install-pnpm)
 - [Usage](#usage)
 - [Functions](#functions)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
@@ -80,11 +78,3 @@ Functions:
 1. MessageService_Send: [POST] http://localhost:7071/api/messages/{option}/send # Returns the whole answer from API
 1. MessageService_Stream: [POST] http://localhost:7071/api/messages/{option}/stream # Streams the answer using text/event-stream
 1. StaticService_GetStaticFile: [GET] http://localhost:7071/api/public/{\*path} # Serves index.html
-
-## Contributing
-
-Guidelines for contributing to this project.
-
-## License
-
-Include the license information for your project.
