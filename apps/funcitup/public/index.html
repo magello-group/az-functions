@@ -350,13 +350,14 @@ Adress Linköping:
 
       const messageDiv = document.createElement('div')
       messageDiv.classList.add('chat-message', 'sent')
-      messageDiv.textContent = markupate(message)
+      messageDiv.innerHTML = markupate(message)
 
       messageWrapper.appendChild(messageDiv)
       chatHistory.appendChild(messageWrapper)
 
       // chatHistory.scrollTop = chatHistory.scrollHeight;
       inputField.value = ''
+      autoGrowTextarea(inputField);
 
       // Send message to server
       userHistory.push({
