@@ -40,11 +40,18 @@ class DocumentRetriever {
     return chunks
   }
 
-  private processText(content: string): string {
+  public processText(content: string): string {
     // const words = content.split(/\s+/)
     const processedWords = natural.PorterStemmerSv.tokenizeAndStem(content)
       // We don't want to stem the word 'magello' as it is a brand name
       .filter((word) => word.toLowerCase() !== 'magello')
+      .map((w) => {
+        let retw = w
+        if (w.toLowerCase().endsWith('ing')) {
+          retw = w.slice(0, -3)
+        }
+        return retw
+      })
     // .filter((word) => !this.isStopWord(word))
     // .map((word) => this.stem(word))
     return processedWords.join(' ')
@@ -84,9 +91,8 @@ class DocumentRetriever {
     const results = topIndices
       .map((idx) => {
         const metadata = this.metadata[idx]
-        const source = metadata.source
+        const source = metadata.source + ':' + metadata.chunk_id
         if (!seenSources.has(source)) {
-          console.log('Adding source:', source)
           seenSources.add(source)
           return {
             content: this.documents[idx],

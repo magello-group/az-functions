@@ -1,59 +1,43 @@
-Sammanfattning av Personalhandbok
-Personalhandboken för Magello Group AB innehåller omfattande riktlinjer och policyer som syftar till att skapa en trygg, inkluderande och professionell arbetsmiljö för alla anställda. Handboken täcker flera viktiga områden:
-
-Arbetsmiljö: Magello strävar efter en god arbetsmiljö, både fysiskt och psykosocialt. Anställda uppmanas att rapportera eventuella synpunkter eller klagomål till sin närmaste chef. Företaget arbetar aktivt för att förhindra kränkande särbehandling och diskriminering.
-
-Jämställdhet och jämlikhet: Magello främjar en arbetsplats fri från diskriminering och trakasserier. Företaget säkerställer att alla anställda, oavsett kön, etnicitet, religion, funktionsnedsättning eller sexuell läggning, har lika rättigheter och möjligheter i fråga om anställning och utveckling.
-
-Arbetstider och flextid: Den normala arbetstiden är 40 timmar per vecka, med möjlighet till flextid där anställda kan ha upp till 16 timmar plus- eller minusflex. Flextiden får inte tas ut som hela dagar och stäms av vid månadsskifte.
-
-Övertidsersättning: Magello erbjuder sex veckors semester som kompensation för arbete utanför ordinarie arbetstid. Om övertid beordras av kund, ska detta diskuteras med konsultchef eller kundansvarig.
-
-Tidrapportering: Tidrapportering sker via systemet Kleer (https://www.kleer.se/), där anställda registrerar all tid, både debiterbar och odebiterbar. Tidrapporteringen ska göras senast sista arbetsdagen vid månadsskifte, och det är viktigt att även icke debiterbar tid redovisas korrekt.
-
-Friskvård: Magello uppmuntrar anställda att ta hand om sin hälsa och erbjuder ett friskvårdsbidrag som täcker 50% av kostnaden upp till 5 000 kronor per anställd och år. Friskvårdsbidraget kan användas för aktiviteter som godkänts av Skatteverket och administreras via förmånsportalen Benify.
-
-Föräldraledighet och föräldralön: Anställda har rätt till föräldraledighet i samband med barns födelse och kan ta ut ledighet i upp till 10 dagar i samband med detta. Magello erbjuder även föräldralön på 7 500 kronor i bruttoersättning per månad under maximalt 6 månader, förutsatt att ledigheten är planerad och avtalad i förväg.
-
-Sjukfrånvaro: Vid sjukdom ska anställda informera både sin uppdragsgivare och sin chef. Magello betalar sjuklön med 80% av SGI (Sjukpenninggrundande inkomst) under de första 14 sjukdagarna. Från den 15:e dagen går ansvaret över till Försäkringskassan.
-
-Alkohol- och drogpolicy: Magello har en nolltoleranspolicy mot alkohol- och drogpåverkan under arbetstid. Vid misstanke om påverkan ska detta rapporteras till närmaste chef. Drogtester kan förekomma om kunder kräver det.
-
-Sekretess: Anställda ska skriva på ett sekretessavtal (NDA) vid anställningens början för att skydda känslig information.
-
-Genom att följa dessa riktlinjer och policyer strävar Magello efter att skapa en arbetsplats där alla anställda kan trivas och utvecklas professionellt.
-
+Personalhandbok för Magello Group AB
+1. Arbetsmiljö: Magello strävar efter en god arbetsmiljö. Medarbetare uppmanas att rapportera kränkande särbehandling till chefer. Ergonomi och bra arbetsredskap betonas.
+2. Jämställdhets- och jämlikhetsarbete: Magello arbetar för en jämställd och jämlik arbetsplats, utan diskriminering. Lika villkor gäller för anställning, löner och utvecklingsmöjligheter.
+3. Avvikelser och förbättringar: Medarbetare kan rapportera avvikelser och förbättringsförslag till chefen, som ger återkoppling på hanteringen.
+4. Arbetstider: Normal arbetstid är 40 timmar per vecka. Flextid tillämpas med upp till 16 timmar plus- eller minusflex.
+5. Beredskap och jour: Vid beredskap eller jour får konsulter 55% av fakturerat belopp. Utryckning kan ge samma ersättning eller tas ut som ledighet.
+6. Övertidsersättning: Magello erbjuder sex veckors semester som kompensation för arbete utanför ordinarie arbetstid. Övertid ska beordras av kunden.
+7. Arbetsutrustning: Magello tillhandahåller nödvändig utrustning. Utrustning ska användas hållbart och bytas ut vid behov.
+8. CV-uppdatering: Medarbetare uppmanas att hålla sina CV:n uppdaterade för att vara aktuella för nya uppdrag.
+9. Det dagliga arbetet: Medarbetare ska följa regler och normer på arbetsplatsen och rapportera tid korrekt.
+10. Festligheter: Alkohol kan förekomma vid festligheter, men det är individuellt val om man vill delta. Måttfullhet betonas.
+11. Vid misstanke av alkohol- eller drogpåverkan: Magello har nolltolerans och ansvarar för att hantera eventuella problem tidigt.
+12. Drogtester: Drogtester kan genomföras om det krävs av kunder. Magello har rehabiliteringsansvar för medarbetare med missbruksproblem.
+13. Friskvård och förmånsportal: Friskvårdsbidrag erbjuds och administreras via Benify. Bidraget täcker 50% av kostnaden upp till 5 000 kr per år.
+14. Förskottssemester: Anställda har rätt till 25 dagar förskottssemester, med särskilda regler för avdrag vid avslutade anställningar.
+15. Försäkringar: Magello erbjuder sjukvårdsförsäkring med självrisk och betalar för vissa kostnader.
+16. Föräldraledighet: Rätt till föräldraledighet regleras av lagar. Föräldralön betalas ut under vissa förutsättningar.
+17. Kommunikation: Slack och Office 365 används för intern kommunikation. Trivselregler för Slack betonas.
+18. Kompetensutveckling: Magello avsätter tid för lärande och kompetensutveckling, med 8 arbetsdagar per år för detta ändamål.
+19. Ledighet vid barns födelse: Rätt till 10 dagar ledighet vid barns födelse, med ersättning från Försäkringskassan.
+20. Permission: Ledighet utan löneavdrag ges vid vissa tillfällen, exempelvis vid 50-årsdag eller begravning.
+21. Lön: Lön betalas den 25:e varje månad. Reseräkningar ska registreras i tid.
+22. Löneväxling: Möjlighet till löneväxling för pensionsinbetalningar erbjuds.
+23. Milersättning: Milersättning betalas ut enligt gällande regler för tjänsteresor.
+24. Närståendevård: Rätt till ersättning och ledighet för vård av närstående.
+25. Personuppgifter: Medarbetare godkänner hantering av personuppgifter vid anställning.
+26. Provanställning: Provanställning gäller i 6 månader, med möjlighet till omedelbar uppsägning.
+27. Rekryteringsbonus: Bonus erbjuds à 25 000kr för att rekommendera nya kollegor.
+28. Sekretess: Anställda ska skriva på sekretessavtal och följa riktlinjer för hantering av känslig information.
+29. Semester: Rätt till semester enligt semesterlagen. Rutiner för planerad frånvaro ska följas.
+30. Sjukfrånvaro: Sjuklön betalas ut under sjukdom. Läkemedel och intyg ska hanteras korrekt.
+31. Skatteavdrag: Skatteavdrag görs enligt gällande regler.
+32. Studieledighet: Ledighet för studier kan beviljas under vissa förutsättningar.
+33. Säkerhetskontroll: Godkänd säkerhetskontroll kan krävas för vissa uppdrag.
+34. Bildskärmsglasögon: Kostnad upp till 750kr för glasögon för arbete vid datorskärm täcks av Magello.
+35. Tidrapportering: Tid ska rapporteras i systemet Kleer, inklusive debiterbar och odebiterbar tid.
+36. Tjänstledighet: Tjänstledighet är obetald och ska samordnas med ansvarig chef.
+37. Traktamenten: Traktamente betalas ut vid tjänsteresor som medför övernattning.
+38. Vård av sjukt barn (TFP): Rätt till tillfällig föräldrapenning för vård av sjukt barn under 12 år.
+39. Utrymning och brandskydd: Rutiner för utrymning och brandsäkerhet beskrivs.
 Metadata
-Keywords: 
-Magello Group AB
-Personalhandbok
-Arbetsmiljö
-Jämställdhet
-Jämlikhet
-Arbetstider
-Övertidsersättning
-Friskvård
-Föräldraledighet
-Sjukfrånvaro
-Tidrapportering
-Tidrapport
-Tidrapportera
-Traktamenten
-Traktamente
-Alkoholpolicy
-drogpolicy
-Rekrytering
-Sekretess
-
-Viktiga termer:
-
-Kränkande särbehandling
-Flextid
-Beredskap
-Drogtester
-Förskottssemester
-Föräldralön
-Tjänstledighet
-Tillfällig föräldrapenning
-Utrymning och brandskydd
-Löneväxling
+Keywords: Magello Group AB, personalhandbok, arbetsmiljö, jämställdhet, avvikelser, arbetstider, beredskap, övertidsersättning, arbetsutrustning, CV-uppdatering, festligheter, alkohol, drogtester, friskvård, förskottssemester, försäkringar, föräldraledighet, kommunikation, kompetensutveckling, permission, lön, löneväxling, milersättning, närståendevård, personuppgifter, provanställning, rekryteringsbonus, sekretess, semester, sjukfrånvaro, skatteavdrag, studieledighet, säkerhetskontroll, bildskärmsglasögon, tidrapportering, tjänstledighet, traktamenten, vård av sjukt barn, utrymning.
+Viktiga termer: Arbetsmiljö, diskriminering, jämställdhet, flextid, sjuklön, föräldralön, friskvårdsbidrag, sekretessavtal, traktamente, tillfällig föräldrapenning, provanställning.
