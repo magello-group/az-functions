@@ -1,0 +1,59 @@
+Lite enklare. Mycket smartare. Sedan 1996.
+Metadata
+Keywords: Magello, hållbar digitalisering, digitala tjänster, systemutveckling, integration, cloud, IT-konsulter, utbildning, miljöansvar, agila team, långsiktig utveckling
+Viktiga termer: Hållbarhet, ISO 14001, konsultverksamhet, partnernätverk, e-handel, digitala produkter, projektledning, krav och arkitektur, R2M Academy, gasellföretag
+
+---
+
+Teamet är vår styrka – vi jobbar tillsammans för att förverkliga våra kunders idéer
+Vi bygger hållbara digitala tjänster för ett hållbart samhälle
+På Magello strävar vi efter att bidra till en hållbar samhällsutveckling och en bättre miljö. Vi bygger tjänster med så liten miljöpåverkan som möjligt och använder modern infrastruktur som minskar energi- och resursförbrukningen. Vi gör detta genom att bygga tjänster som håller länge. Vi har märkt att de hållbara principer som vi vet fungerar inom systemutveckling också ger de tjänster vi bygger bästa hållbarhet.
+
+Vi är generalister med spetskompetens och är inte begränsade till specifika produkter eller metodiker, utan kan vara med från början och utifrån kundbehov ta fram den lösning som bäst passar våra kunder. Vi vet också att lärande är det viktigaste för oss, våra kunder och samhället i stort. Därför är vi engagerade i flera ledningsgrupper för utbildningsinstitutioner och stödjer meetups samt hackathons. Ett starkt IT-community behövs för framtiden.
+
+Naturligtvis genomsyrar miljöansvar allt vi gör, från ISO 14001-miljöcertifiering till att våra kontor och konsumtionsvaror är miljömärkta.
+
+Genom att arbeta tillsammans med oss på Magello bidrar du till en mer hållbar framtid. Vi kallar det Fungerande mjukvara | Fungerande samhälle.
+
+Magello i korthet
+Vi utgår från våra kontor i Stockholm och Linköping med räckvidd över hela landet. I vårt konsulterbjudande inom områdena Digitala tjänster, Integration och Cloud arbetar vi mot en bred kundkrets, allt ifrån företag i startup-fas till stora företag, myndigheter och organisationer.
+
+Inom Digitala tjänster fokuserar vi på kunderbjudanden och intäktsströmmar för våra kunders digitala produkter och tjänster. E-handel, digitala produkter och andra online-tjänster ställer allt högre krav på arkitektur, utveckling och ett agilt arbetssätt. Vi driver processen från idé till en robust och hanterbar lösning.
+
+En effektiv och modern systemintegration är en viktig förutsättning för snabbare digitaliserings- och innovationstakt. Med lång erfarenhet inom Integration hjälper vi våra kunder att knyta ihop sina affärsprocesser både inom företaget och med sina kunder, leverantörer och partners.
+
+Inom området Cloud hjälper vi våra kunder att dra nytta av modern distribuerad teknik för att skapa skalbara och kostnadseffektiva lösningar för både publika och privata molntjänster. Med rätt kompetens, arbetsmetodik och teknik tar vi snabbt fram säkra och stabila molnlösningar utifrån varje kunds behov.
+
+Personliga, trygga, kommunikativa och lärande
+Våra värdeord är grunden till hur vi agerar och uppfattas av marknaden och framtida kollegor. Som ett modernt, själv-organiserande företag med gemensam målbild kan vi möta kunder med en tydlighet och ett gemensamt budskap om värdet att samarbeta med oss.
+
+Vårt aktiva arbete med dessa värdeord är även förutsättningen för oss att kunna växa vidare, utvecklas som bolag och bli fler passionerade kollegor som vill lösa kundens egentliga problem.
+
+Med starka team, modern teknik och effektiva metoder når vi målet
+Consulting
+För kunder i behov av kompetensförstärkning bidrar vi med agila team och specialister inom systemutveckling. Bredden är vår styrka och tillsammans kan vi alltid hjälpa dig att hitta rätt kompetens för varje uppdrag. Med ett agilt team via Magello Consulting får du stöd i hela utvecklingsprocessen.
+
+Solutions - långsiktig utveckling
+Magello Solutions är vårt erbjudande för långsiktiga kundrelationer där det finns ett kontinuerligt behov av utveckling. Med ett dynamiskt teambaserat upplägg anpassar vi teamet i storlek och kompetens över tid för att hänga med i en ständig förändring. Våra Solutions-konsulter sitter i våra egna lokaler och jobbar tätt tillsammans. Långsiktig förvaltning kombineras med att bygga nytt och att integrera mellan olika system. Vi stöttar också upp med expertkunskaper och hjälper till med projektledning, krav och arkitektur.
+
+Connect
+Inom Magello Connect erbjuder vi konsulter från vårt partnernätverk för att kunna täcka upp kundernas behov av IT-konsulter oavsett område. Partnernätverket på över 5 000 kvalificerade konsulter gör att vi alltid kan hitta rätt kompetens för vår kund.
+
+Magello genom tiderna
+Följ med på vår resa från starten till där vi står nu. Här lyfter vi fram de nyckelhändelser och milstolpar som har byggt Magello till vad vi är idag.
+
+1996: Bolaget grundades som ett dotterbolag till Ida Systems i Linköping.
+1998: Bolaget köps loss av personalen och blir självständigt.
+2000: Vi börjar jobba med Java och Open source.
+2008: Vi påbörjar vår satsning på Net-utveckling.
+2012: Premiär för R2M Awards (vinner gör Botkyrka kommun).
+2015: Red Hat utser oss till European business partner of the year.
+2017: R2M blir Githubs första partner i Norden.
+2018: R2M Academy lanseras och vi blir bland de bästa på marknaden inom lärande och kompetensutveckling.
+2019: Vi blir gasellföretag för tredje gången.
+2020: Från och med 13 mars ställer om till remote-arbete för alla som kan.
+2021: Vi tydliggör vårt erbjudande inom cloud, integration och digitala tjänster.
+2022: R2M byter namn till Magello.
+2022: Magellos dotterbolag Magello East öppnar i Linköping och stärker vår närvaro i region Östergötland och kringliggande regioner.
+2023: Magello Group stärker sitt erbjudande inom Digitala tjänster och sin lokala närvaro i Linköping genom förvärv av Webking.
+2024: Magello fortsätter stärka sitt kunderbjudande och förvärvar Spring – en framgångsrik digital partner inom mjukvaruutveckling, design och användbarhet.

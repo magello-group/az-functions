@@ -1,70 +1,75 @@
-Magello Group AB och Magello East AB har antagit en pensionspolicy som syftar till att erbjuda medarbetarna grundläggande trygghet samtidigt som den är anpassningsbar till individuella behov. Policyn omfattar tillsvidareanställda, provanställda och visstidsanställda som arbetar minst 8 timmar per vecka. Bolaget erbjuder tjänstepension genom SEB Pension och Försäkring AB, inklusive ålderspension, efterlevandepension, sjukförsäkring och premiebefrielse. Medarbetare kan även välja att teckna familjepension.
+Pensionspolicy för Magello Group AB och Magello East AB
+Pensionspolicyn för Magello Group AB och Magello East AB, antagen den 1 december 2009 och senast reviderad den 14 februari 2023, syftar till att erbjuda medarbetarna en trygg och anpassningsbar pensionslösning. Policyn är en del av företagets övergripande personalpolicy och är utformad för att attrahera och behålla kompetent personal.
 
-Policyn inkluderar även tjänstegrupplivförsäkring (TGL), trygghetsförsäkring vid arbetsskada (TFA), vårdförsäkring och gruppförsäkringen Trygg Hälsa. Löne- och bonusväxling erbjuds som ett sätt för medarbetare att omvandla delar av sin lön eller bonus till pensionsförmåner. Policyn reglerar även förmåner under föräldraledighet, sjukfrånvaro och vid avgång från tjänsten.
+1. Anslutning till pensionspolicy
+Alla tillsvidareanställda, provanställda och visstidsanställda som arbetar minst 8 timmar per vecka omfattas av denna policy från anställningens början. Anmälan till försäkringsgivaren ska göras från och med den månad då den anställde börjar.
 
-Metadata:
+2. Tjänstepension
+Tjänstepensionsförsäkringar: Bolaget betalar premier till SEB Pension och Försäkring AB för ålderspension, efterlevandepension, sjukförsäkring och premiebefrielse. Den anställde kan välja att placera delar av premien i en familjepension.
+Ålderspension och efterlevandepension: Tjänstepensionsförsäkringen ägs av arbetsgivaren, och förmånstagare till ålderspensionen är alltid den anställde. Efterlevandepensionen kan anpassas av den anställde.
+Sjuklön: Sjuklön betalas enligt gällande svensk lag. Bolaget betalar sjuklön under dag 15-90 vid sjukskrivning, med 10% av lönen för lönedelar upp till 10 prisbasbelopp och 90% för lönedelar mellan 10 och 30 prisbasbelopp.
+Sjukförsäkring: Bolaget betalar premier så att den anställde får en ersättning som uppgår till 90% av lönen upp till 10 prisbasbelopp, 80% mellan 10 och 20 inkomstbasbelopp och 70% mellan 20 och 30 inkomstbasbelopp.
+Premiebefrielse: Premier betalas till en premiebefrielseförsäkring.
+3. Pensionsmedförande lön
+Den pensionsmedförande lönen baseras på den fasta månadslönen och semestertillägg.
+Löne- och bonusväxling påverkar inte den pensionsmedförande lönen.
+4. Ordinarie pensionsålder
+Den ordinarie pensionsåldern är 65 år, men utbetalning av pension kan börja vid 55 års ålder om anställningen har upphört.
+
+5. Premieplan
+Bolaget betalar tjänstepensionspremier baserat på den pensionsmedförande lönen. Premierna fördelas månadsvis. Premierna för ålders- och efterlevandepension, sjukförsäkring och premiebefrielse ska rymmas inom den beräknade premien.
+
+6. Tjänstegrupplivförsäkring (TGL)
+Bolaget tecknar tjänstegrupplivförsäkring för alla anställda, med premie som betalas av Bolaget.
+
+7. Trygghetsförsäkring vid arbetsskada (TFA)
+Bolaget tecknar trygghetsförsäkring vid arbetsskada för alla medarbetare, med premie som betalas av Bolaget.
+
+8. Vårdförsäkring
+Bolaget tecknar vårdförsäkring för alla anställda. Anställda kan avstå från vårdförsäkringen om den medför förmånsbeskattning. Familjemedlemmar kan också teckna vårdförsäkring kollektivt.
+
+9. Löneväxling
+Medarbetare kan växla en del av sin lön till förmån för tjänstepensionsförsäkring. Löneväxling gäller för medarbetare vars lön överstiger 8,07 inkomstbasbelopp per år (2023 motsvarar detta 599 601 kr). Den växlade lönen räknas upp med en överenskommen faktor.
+
+10. Bonusväxling
+Medarbetare kan växla bonus till förmån för tjänstepensionsförsäkring. Erbjudandet gäller för medarbetare vars inkomst överstiger 8,07 inkomstbasbelopp per år.
+
+11. Tjänstledighet
+Bolaget fortsätter att betala premier för tjänstepensionsförsäkring under föräldraledighet och annan ledighet i upp till 13 månader. Vid annan tjänstledighet omfattas inte medarbetaren av förmånerna.
+
+12. Arbetsoförmåga
+Bolaget betalar tjänstepensionspremier vid arbetsoförmåga på grund av sjukdom eller olycksfall.
+
+13. Avgång ur tjänst
+Vid avgång omfattas inte medarbetaren av pensionspolicyn. Fribrev på intjänad pension kan utfärdas.
+
+14. Byte av tjänst
+Medarbetare som byter tjänst internt omfattas av den pensionspolicy som gäller för den nya tjänsten.
+
+15. Försäkringsgivare
+Försäkringsgivare är SEB Pension och Försäkring AB, med kontaktpersoner angivna för frågor kring försäkringar.
+
+Metadata
 Keywords:
 
-Pensionspolicy
-
 Magello Group AB
-
-Magello East AB
-
+Pensionspolicy
 Tjänstepension
-
-Ålderspension
-
-Efterlevandepension
-
 Sjukförsäkring
-
-Premiebefrielse
-
-Familjepension
-
-Tjänstegrupplivförsäkring (TGL)
-
-Trygghetsförsäkring vid arbetsskada (TFA)
-
-Vårdförsäkring
-
-Trygg Hälsa
-
 Löneväxling
-
 Bonusväxling
-
 Föräldraledighet
-
-Arbetsoförmåga
-
-SEB Pension och Försäkring AB
-
+Vårdförsäkring
+Tjänstegrupplivförsäkring
+Trygghetsförsäkring
+Pensionsmedförande lön
 Viktiga termer:
 
-Pensionsmedförande lön
-
-Premieplan
-
-Prisbasbelopp (pbb)
-
-Inkomstbasbelopp (ibb)
-
-Försäkringspremier
-
-Skattemässig avdragsrätt
-
-Försäkringsgivare
-
-Tjänstledighet
-
-Arbetsskada
-
-Rehabilitering
-
-Försäkringsförmåner
-
-Kollektivförsäkring
-
-Förmånsbeskattning
+Ålderspension
+Efterlevandepension
+Premiebefrielse
+Sjuklön
+Inkomstbasbelopp
+Prisbasbelopp
+Fribrev
+Familjepension

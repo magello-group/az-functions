@@ -1,55 +1,46 @@
-Verksamhetspolicy 
+Verksamhetspolicy
 
---- PAGE BREAK ---
+Affärsidé: Magello Group AB hjälper kunder att lyckas genom att erbjuda rätt IT-kompetens.
 
-Dokument  Godkänt av Datum Sida 
-Verksamhetspolicy  Thomas Näslund 2022-02-07 2 (2) 
- 
-Affärsidé 
-Vi hjälper våra kunder att lyckas med hjälp av rätt kompetens inom IT.  
-Kvalitetspolicy  
-Magello Group AB:s kunder och andra intressenter kan förvänta sig att:  
-• Vi levererar avancerade konsulttjänster inom systemutveckling och systemintegration i rätt tid och enligt 
-överenskommelse 
-• Vi ligger i framkant i vår bransch med god kunskap, moderna arbetsmetoder och hög kompetens  
-• Vi skapar långsiktigt nöjda kunder genom att alltid leverera tjänster som uppfyller både specificerade och 
-outtalade kundkrav 
-• Vi är pålitliga som affärspartner, arbetsgivare, förvaltare eller annan partner 
-• Vi samarbetar med noga utvalda kompetenta leverantörer och samarbetspartners 
-• Vi verkar i våra uppdrag som ett väl sammansvetsat team för att vara snabba, smarta, engagerade och 
-personliga 
-• Vi kompetensutvecklar våra medarbetare ständigt för att möta våra kunders krav och förväntningar 
-• Vi levererar ett mervärde som gör att vi upplevs som mycket prisvärda och attraktiva av våra kunder 
-• Vår kvalitetspolicy är förstådd och tillämpas av alla i organisationen samt kontinuerligt revideras 
- 
-Varje anställd åtar sig att:  
-• Uppfylla kundkrav och övriga tillämpliga krav från intressenter, inklusive tillämpliga bindande lagar och 
-förordningar 
-• Bidra till att ständigt förbättra verksamheten och höja kvalitetsnivån på våra projekt och tjänster 
-Miljöpolicy  
-Vi på Magello strävar efter att bidra till en hållbar samhällsutveckling och en bättre miljö. Som en IT-
-konsultbyrå erbjuder vi tjänster och erbjudanden med minimal miljöpåverkan. Vi använder modern IT-
-infrastruktur som minskar energi- och resursförbrukningen. Att välja Magello som leverantör eller 
-samarbetspartner ska vara ett bra miljöval.  
-Våra kunder och andra intressenter kan förvänta sig att: 
-• Vi utvärderar våra miljöaspekter ur ett livscykelperspektiv och skapar handlingsplaner för att skydda 
-miljön och minimera negativ miljöpåverkan 
-• Vi utbildar och motiverar våra anställda att utföra sina arbetsuppgifter på ett miljömässigt ansvarsfullt sätt 
-• Vi efterfrågar ett aktivt miljöarbete hos våra leverantörer och samarbetspartners 
-• Vi strävar efter att minska miljöpåverkan från resande och transporter genom planering och miljöhänsyn 
-vid val av transportsätt 
-• Vi strävar efter att minska vår pappersförbrukning 
-• Vi strävar efter att inhandla ekologiska och Fairtrade-märkta produkter 
- 
-Varje anställd hos oss åtar sig att: 
-• Uppfylla gällande miljörelaterade lagar och förordningar samt övriga tillämpliga bindande krav 
-• Bidra till att ständigt förbättra vårt miljöledningssystem genom att verka för att uppfylla miljömålen och 
-uppnå en bättre miljöprestanda i vår verksamhet 
-  
-Vår policy finns tillgänglig på hemsidan. 
- 
-2022-02-07 
-Thomas Näslund 
-VD 
-  
---- PAGE BREAK ---
+Kvalitetspolicy: Kunder och intressenter kan förvänta sig:
+
+Leverans av avancerade konsulttjänster i tid och enligt överenskommelse.
+Framstående branschkunskap och moderna arbetsmetoder.
+Långsiktigt nöjda kunder genom att uppfylla både specificerade och outtalade krav.
+Pålitlighet som affärspartner och arbetsgivare.
+Samarbete med noggrant utvalda leverantörer.
+Effektivt teamwork för snabba och personliga lösningar.
+Kontinuerlig kompetensutveckling av medarbetare.
+Leverans av mervärde som uppfattas som prisvärt av kunder.
+Kvalitetspolicyn ska vara förstådd och tillämpad av alla anställda.
+Anställdas åtaganden:
+
+Uppfylla kundkrav och tillämpliga lagar.
+Bidra till ständiga förbättringar av verksamheten och kvalitetsnivån.
+Miljöpolicy: Magello strävar efter att bidra till en hållbar samhällsutveckling med minimal miljöpåverkan. Kunder och intressenter kan förvänta sig:
+
+Utvärdering av miljöaspekter och handlingsplaner för att skydda miljön.
+Utbildning av anställda i miljöansvar.
+Aktivt miljöarbete från leverantörer.
+Minska miljöpåverkan från transporter och resande.
+Minska pappersförbrukning.
+Inköp av ekologiska och Fairtrade-märkta produkter.
+Anställdas miljöåtaganden:
+
+Uppfylla miljörelaterade lagar och krav.
+Bidra till förbättringar av miljöledningssystemet och uppnå miljömål.
+Tillgänglighet: Policyn finns tillgänglig på Magellos hemsida.
+
+Metadata
+Keywords: Magello Group AB, affärsidé, kvalitetspolicy, miljöpolicy, konsulttjänster, hållbarhet, miljöpåverkan, kompetensutveckling, kundnöjdhet, miljöledningssystem.
+Viktiga termer:
+Affärsidé
+Kvalitetspolicy
+Miljöpolicy
+Konsulttjänster
+Hållbar samhällsutveckling
+Miljöaspekter
+Livscykelperspektiv
+Ekologiska produkter
+Fairtrade-märkta produkter
+Ständiga förbättringar

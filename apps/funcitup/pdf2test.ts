@@ -112,7 +112,7 @@ async function addAllTxtFiles(directoryPath: string) {
   const txtFiles = files.filter(
     (file) => path.extname(file).toLowerCase() === '.txt'
   )
-  const doc = new DocumentRetriever(200, 50)
+  const doc = new DocumentRetriever(300, 50)
   const txtPromises = txtFiles.map(async (txtFile) => {
     const txtFilePath = path.join(directoryPath, txtFile)
     const text = await fs.readFile(txtFilePath, 'utf-8')
@@ -122,16 +122,17 @@ async function addAllTxtFiles(directoryPath: string) {
 
   const jsonFilepath = path.join('src/documents', 'documents.json')
   await fs.writeFile(jsonFilepath, doc.serialize())
-  const question = 'Vilka sitter i ledningen?'
+  const question = 'Var tidrapport jag?'
   console.log(
     '======HELLO=======',
     natural.PorterStemmerSv.tokenizeAndStem(question)
   )
   console.log('Question:', question)
   doc.retrieve(question, 5).forEach((result, i) => {
-    console.log('Matched:', result.content)
+    // console.log('Matched:', result.content)
     console.log('Source:', result.source)
     console.log('Score:', result.score)
+    console.log('Score:', result.content)
     console.log(i)
   })
   return doc
@@ -141,5 +142,5 @@ async function addAllTxtFiles(directoryPath: string) {
 //   .then(() => convertAllPdfsInDirectory('./files/pdf'))
 //   .then(() => addAllTxtFiles('./files/txt'))
 //   .catch(console.error)
-convertAllPdfsInDirectory('./files/pdf').catch(console.error)
-// addAllTxtFiles('./files/txt').catch(console.error)
+// convertAllPdfsInDirectory('./files/pdf').catch(console.error)
+addAllTxtFiles('./files/txt').catch(console.error)
