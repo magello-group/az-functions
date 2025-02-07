@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chat Page with Message Bubbles</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
         :root {
       --background-color: #ffffff;
@@ -109,6 +110,8 @@
 
     .chat-input-wrapper {
       display: flex;
+      align-items: center;
+      margin-top: auto;
       padding: 10px;
       background-color: var(--menu-background-color);
       border-top: 1px solid var(--border-color);
@@ -117,12 +120,46 @@
       right: 0;
       left: 200px;
     }
+    ul, ol {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+
+    ul li, ol li {
+      margin-bottom: 5px;
+    }
+
+    ul {
+      list-style-type: disc;
+    }
+
+    ol {
+      list-style-type: decimal;
+    }
+    code {
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    pre {
+      background-color: #f4f4f4;
+      color: #000;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: 'Courier New', Courier, monospace;
+    }
     .chat-input {
       flex: 1;
       padding: 10px;
       border: 1px solid var(--border-color);
       border-radius: 4px;
-      font-size: 16px;
+      resize: none; /* Disable manual resizing */
+      overflow: hidden; /* Hide overflow */
+      max-height: calc(1.5em * 5); /* Maximum height for 5 lines */
+      line-height: 1.5em; /* Line height */
+      font-family: inherit;
     }
 
     .send-btn {
@@ -163,7 +200,6 @@
     }
   </style>
 </head>
-
 <body>
   <div class="menu">
     Välj AI Assistent
@@ -187,164 +223,186 @@
       </div>
       <div class="loading-spinner" id="loadingSpinner"></div>
       <div class="chat-input-wrapper">
-        <input type="text" id="chat-input" class="chat-input" placeholder="Type a message..." />
+        <textarea id="chat-input" class="chat-input" placeholder="Type a message..." rows="1"></textarea>
         <button class="send-btn" onclick="sendMessage()">Send</button>
       </div>
     </div>
   </div>
-  <script>
-    const userHistory = [
-      {
-        role: 'system',
-        content:
-          'Du är en hjälpsam assistent som svarar på frågor från anställda om bolaget Magello Group AB med hjälp av RAG som bifogas tillsammas med frågan',
-      },
-      {
-        role: 'assistant',
-        content: 'Magello Group AB är ett svenskt konsultföretag inom IT och teknik, grundat 1996 med huvudkontor i Stockholm. VD (CEO) är Tomas Näslund.'
-      }
-    ]
-    function showLoadingSpinner() {
-      document.getElementById('loadingSpinner').style.display = 'block';
-    }
-
-    // Function to hide the loading spinner
-    function hideLoadingSpinner() {
-      document.getElementById('loadingSpinner').style.display = 'none';
-    }
-    const htmlEncode = (content) => {
-      const t = document.createElement('textarea')
-      t.textContent = content
-      return t.innerHTML
-    }
-    const markupate = (text) => 
-      text.replace(/\*\*(.*?)\*\*/g, "<b>$1</b>")
-        .replace(/__(.*?)__/g, "<u>$1</u>")
-        .replace(/`(.*?)`/g, "<pre>$1</pre>")
-        .replace(/~~(.*?)~~/g, "<i>$1</i>")
-        .replace(/--(.*?)--/g, "<del>$1</del>")
-        .replace(/\[(.*?)\]\((.*?)\)/g, "<a target='_blank' href='$2'>$1</a>")
-        .replace(/###### (.*?)\n/g, "<h6>$1</h6>")
-        .replace(/##### (.*?)\n/g, "<h5>$1</h5>")
-        .replace(/#### (.*?)\n/g, "<h4>$1</h4>")
-        .replace(/### (.*?)\n/g, "<h3>$1</h3>")
-        .replace(/## (.*?)\n/g, "<h2>$1</h2>")
-        .replace(/# (.*?)\n/g, "<h1>$1</h1>")
-        .replace(/\n/g, '<br />')
-    let model = 'openai'
-    const setModel = (value) => {
-      model = value
-    }
-    const fetchQuestion = async (question, callback) => {
-      try {
-        const response = await fetch(`/api/messages/${model}/stream`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(question)
-        });
-        if (!response.ok) {
-          let errorMessage = 'Sorry, I\'m not available right now. Please try again later.';
-
-          if (response.status >= 400 && response.status < 500) {
-            errorMessage = 'Client error occurred. Please check your request and try again.';
-          } else if (response.status >= 500) {
-            errorMessage = 'Server error occurred. Please try again later.';
-          }
-          throw new Error(errorMessage);
-        }
-        const reader = response.body?.getReader();
-        const decoder = new TextDecoder();
-        let fetchBuffer = '';
-        while (true) {
-          const { done, value } = await reader.read();
-          if (done) {
-            break;
-          }
-          fetchBuffer += decoder.decode(value, { stream: true });
-          // Process each line
-          let lines = fetchBuffer.split('\n\n');
-          fetchBuffer = lines.pop(); // Keep the last incomplete line in the buffer
-          for (const line of lines) {
-            if (line.trim()) {
-              if (line.includes('data: [DONE]')) {
-                callback(null);
-                return;
-              } else if (line.startsWith(':')) {
-                continue
-              }
-              const data = JSON.parse(line.replace(/^data: /, ''));
-              callback(data);
-              // Process the chunk (e.g., update the UI)
-            }
-          }
-        }
-      } catch (error) {
-        hideLoadingSpinner()
-        throw error
-      }
-    }
-    function sendMessage() {
-      const inputField = document.getElementById('chat-input')
-      const message = inputField.value.trim()
-      if (message) {
-        const chatHistory = document.getElementById('chat-history')
-        const chatContainer = document.querySelector('.chat-container')
-
-        // Create wrapper for message
-        const messageWrapper = document.createElement('div')
-        messageWrapper.classList.add('chat-message-wrapper', 'sent')
-
-        const messageDiv = document.createElement('div')
-        messageDiv.classList.add('chat-message', 'sent')
-        messageDiv.textContent = message
-
-        messageWrapper.appendChild(messageDiv)
-        chatHistory.appendChild(messageWrapper)
-
-        // chatHistory.scrollTop = chatHistory.scrollHeight;
-        inputField.value = ''
-
-        // Send message to server
-        userHistory.push({
-          role: 'user',
-          content: htmlEncode(message)
-        })
-
-        const answerWrapper = document.createElement('div')
-        answerWrapper.classList.add('chat-message-wrapper')
-
-        const answerDiv = document.createElement('div')
-        answerDiv.classList.add('chat-message')
-        // messageDiv.innerHTML = markupate(data.message)
-
-        answerWrapper.appendChild(answerDiv)
-        chatHistory.appendChild(answerWrapper)
-        chatContainer.scrollTop = chatContainer.scrollHeight;
-        showLoadingSpinner()
-        let buffer = '';
-        fetchQuestion({ messages: userHistory }, (data) => {
-          if (data) {
-            buffer += data.delta.content
-            answerDiv.innerHTML = markupate(buffer)
-            chatContainer.scrollTop = chatContainer.scrollHeight;
-          } else {
-            userHistory.push({
-              role: 'assistant',
-              content: buffer
-            })
-            buffer = ''
-            hideLoadingSpinner()
-          }
-        }).catch((error) => {
-          console.error(error)
-          answerWrapper.innerHTML = error.message
-          hideLoadingSpinner()
-        })
-      }
-    }
-  </script>
 </body>
+<script>
+  const userHistory = [
+    {
+      role: 'system',
+      content:
+        'Du är en hjälsam chattbot som hjälper användare att hitta information om Magello Group AB. Svara inte på frågor som kan vara känsliga eller personliga, eller om du är osäker på svaret.',
+    },
+    {
+      role: 'assistant',
+      content: `Magello Group AB är ett svenskt konsultföretag inom IT och teknik, grundat 1996 med huvudkontor i Stockholm och ett kontor i Linköping.
+VD (CEO) är Tomas Näslund.
+Huvudkontor:
+Västgötagatan 2, 118 27 Stockholm
+Adress Linköping:
+Ågatan 31, 582 22 Linköping
+      `
+    }
+  ]
+  function showLoadingSpinner() {
+    document.getElementById('loadingSpinner').style.display = 'block';
+  }
+
+  // Function to hide the loading spinner
+  function hideLoadingSpinner() {
+    document.getElementById('loadingSpinner').style.display = 'none';
+  }
+  const htmlEncode = (content) => {
+    const t = document.createElement('textarea')
+    t.textContent = content
+    return t.innerHTML
+  }
+  const markupate = (text) => {
+    console.log('text:', text)
+    return marked.parse(text)
+  }
+  let model = 'openai'
+  const setModel = (value) => {
+    model = value
+  }
+  const fetchQuestion = async (question, callback) => {
+    try {
+      const response = await fetch(`/api/messages/${model}/stream`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(question)
+      });
+      if (!response.ok) {
+        let errorMessage = 'Sorry, I\'m not available right now. Please try again later.';
+
+        if (response.status >= 400 && response.status < 500) {
+          errorMessage = 'Client error occurred. Please check your request and try again.';
+        } else if (response.status >= 500) {
+          errorMessage = 'Server error occurred. Please try again later.';
+        }
+        throw new Error(errorMessage);
+      }
+      const reader = response.body?.getReader();
+      const decoder = new TextDecoder();
+      let fetchBuffer = '';
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) {
+          break;
+        }
+        fetchBuffer += decoder.decode(value, { stream: true });
+        // Process each line
+        let lines = fetchBuffer.split('\n\n');
+        fetchBuffer = lines.pop(); // Keep the last incomplete line in the buffer
+        for (const line of lines) {
+          if (line.trim()) {
+            if (line.includes('data: [DONE]')) {
+              callback(null);
+              return;
+            } else if (line.startsWith(':')) {
+              continue
+            }
+            const data = JSON.parse(line.replace(/^data: /, ''));
+            callback(data);
+            // Process the chunk (e.g., update the UI)
+          }
+        }
+      }
+    } catch (error) {
+      hideLoadingSpinner()
+      throw error
+    }
+  }
+      // Function to auto-grow the textarea
+  function autoGrowTextarea(element) {
+    element.style.height = 'auto';
+    element.style.height = (element.scrollHeight) + 'px';
+  }
+
+  // Add event listener to the textarea
+  const chatInput = document.getElementById('chat-input');
+  chatInput.addEventListener('input', function() {
+    autoGrowTextarea(chatInput);
+  });
+
+  chatInput.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter' && !event.shiftKey) {
+      event.preventDefault();
+      sendMessage();
+    }
+  });
+  
+  function sendMessage() {
+    const inputField = document.getElementById('chat-input')
+    const message = inputField.value.trim()
+    if (message) {
+      const chatHistory = document.getElementById('chat-history')
+      const chatContainer = document.querySelector('.chat-container')
+
+      // Create wrapper for message
+      const messageWrapper = document.createElement('div')
+      messageWrapper.classList.add('chat-message-wrapper', 'sent')
+
+      const messageDiv = document.createElement('div')
+      messageDiv.classList.add('chat-message', 'sent')
+      messageDiv.textContent = markupate(message)
+
+      messageWrapper.appendChild(messageDiv)
+      chatHistory.appendChild(messageWrapper)
+
+      // chatHistory.scrollTop = chatHistory.scrollHeight;
+      inputField.value = ''
+
+      // Send message to server
+      userHistory.push({
+        role: 'user',
+        content: message
+      })
+
+      const answerWrapper = document.createElement('div')
+      answerWrapper.classList.add('chat-message-wrapper')
+
+      const answerDiv = document.createElement('div')
+      answerDiv.classList.add('chat-message', 'received')
+      // messageDiv.innerHTML = markupate(data.message)
+
+      answerWrapper.appendChild(answerDiv)
+      chatHistory.appendChild(answerWrapper)
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+      showLoadingSpinner()
+      let buffer = '';
+      fetchQuestion({ messages: userHistory }, (data) => {
+        if (data) {
+          buffer += data.delta.content
+          // const thought = buffer.split(/<think>|<\/think>/g).filter(a=>!!a)
+          // let blerb = '';
+          // if(thought.length > 1) {
+          //   blerb = `<i><small>${markupate(thought[0])}</small></i><br/>${markupate(thought.slice(1).join(''))}`
+          // } else {
+          //   blerb = `<i><small>${markupate(thought[0] || '')}</small></i>`
+          // }
+          answerDiv.innerHTML = markupate(buffer);
+          chatContainer.scrollTop = chatContainer.scrollHeight;
+        } else {
+          userHistory.push({
+            role: 'assistant',
+            content: buffer
+          })
+          buffer = ''
+          hideLoadingSpinner()
+        }
+      }).catch((error) => {
+        console.error(error)
+        answerWrapper.innerHTML = error.message
+        hideLoadingSpinner()
+      })
+    }
+  }
+</script>
 
 </html>

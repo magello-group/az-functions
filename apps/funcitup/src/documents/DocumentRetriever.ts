@@ -86,6 +86,7 @@ class DocumentRetriever {
         const metadata = this.metadata[idx]
         const source = metadata.source
         if (!seenSources.has(source)) {
+          console.log('Adding source:', source)
           seenSources.add(source)
           return {
             content: this.documents[idx],
