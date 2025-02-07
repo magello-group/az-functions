@@ -70,12 +70,12 @@ async function convertAllPdfsInDirectory(directoryPath: string) {
 
 async function convertAllHtmlFilesInDirectory(directoryPath: string) {
   const urls = [
+    'https://jobb.magello.se/',
     'https://magello.se/om-oss/',
     'https://magello.se/ramavtal/',
     'https://magello.se/case/poster/ica/',
     'https://magello.se/insikter/event/',
     'https://jobb.magello.se/people',
-    'https://jobb.magello.se/',
     'https://jobb.magello.se/departments/cloud',
     'https://jobb.magello.se/departments/digitala-tjanster',
     'https://jobb.magello.se/departments/integration',
@@ -141,5 +141,5 @@ async function addAllTxtFiles(directoryPath: string) {
 //   .then(() => convertAllPdfsInDirectory('./files/pdf'))
 //   .then(() => addAllTxtFiles('./files/txt'))
 //   .catch(console.error)
-
-addAllTxtFiles('./files/txt').catch(console.error)
+convertAllPdfsInDirectory('./files/pdf').catch(console.error)
+// addAllTxtFiles('./files/txt').catch(console.error)

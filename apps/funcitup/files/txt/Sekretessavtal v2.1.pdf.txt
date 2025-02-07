@@ -1,0 +1,130 @@
+Sekretessavtal v2.0 (kopia).docx  
+Version: 2.1 
+ 
+Författare: Magnus Kling 
+ 
+Senast ändrad 
+2022-03-30 
+
+Sekretessavtal och avtal 
+avseende immateriella rättigheter
+§ 1 Allmänt 
+Genom detta avtal åtar sig arbetstagaren tystnadsplikt gentemot arbetsgivaren (R2M Group AB 
+under namnbyte till Magello Group AB, org.nr. 556531-7129) för all konfidentiell information och 
+att ej avslöja någon konfidentiell information för tredje part.  
+Parterna enas också om att immateriella rättigheter till resultat av arbete som utförts i 
+anställningen (t.ex. programkod) tillkommer arbetsgivaren. 
+Avtalet har upprättats i två likalydande exemplar varav parterna tagit var sitt. 
+ 
+§2 Konfidentiell information 
+Med "konfidentiell information" avses i avtalet varje upplysning om arbetsgivaren eller dess 
+uppdragsgivares verksamhet, som inte uppenbart är av sådan karaktär att uppgiften utan 
+olägenhet för uppdragsgivaren eller annan kan avslöjas för utomstående. Såsom konfidentiell 
+information anses också sådan information om enskildas personliga förhållanden som 
+arbetstagaren kan komma i kontakt med genom sitt uppdrag. 
+Konfidentiell information kan vara i såväl skriftlig, muntlig som elektronisk form. Den kan 
+innefatta - men är inte begränsad till: Affärsplaner - affärskoncept, marknadsstrategier och 
+marknadsplaner, kommunikationsplaner, rådgivning, kund- och leverantörslistor, information för 
+bearbetning av nya kundmarknader, funktionsmässiga lösningar, teknologival, 
+säkerhetslösningar, krisplaner och personuppgifter. 
+ 
+§ 3 Icke konfidentiell information 
+Som konfidentiell information skall inte anses uppgift som är allmänt känd eller kommer till 
+allmän kännedom på annat sätt än genom brott från arbetstagarens sida mot innehållet i 
+avtalet. 
+ 
+§ 4 Vidarebefordran av information 
+Konfidentiell information får endast vidarebefordras till anställda hos arbetsgivaren som 
+omfattas av samma tystnadsplikt och i den utsträckning som är nödvändigt för utförande av det 
+aktuella uppdraget. 
+ 
+§ 5 Tillträde till information 
+Arbetstagaren förbinder sig att inte bereda sig tillgång till konfidentiell information i vidare mån 
+än vad som oundgängligen behövs för att utföra uppdrag åt den uppdragsgivare som omfattas 
+av informationen. 
+ 
+§ 6 Återlämnande av information 
+När anställningen och/eller uppdraget upphör, eller när arbetsgivaren eller uppdragsgivaren så 
+begär, skall all konfidentiell information återlämnas till arbetsgivaren eller uppdragsgivaren. 
+Detta gäller även minnesanteckningar från kundmöten, noteringar och utredningar som hänför 
+sig till arbetsgivarens eller uppdragsgivares verksamhet. 
+ 
+§ 7 Vite 
+Vid brott mot tystnadsplikten eller mot skyldigheten att återlämna konfidentiell information enligt 
+ovan kan arbetstagaren åläggas att betala ett vite om 50 000 kronor till arbetsgivaren. 
+ 
+§ 8 Skadestånd 
+Arbetstagaren skall, utöver eventuellt vite, betala skadestånd enligt gällande svensk lag i 
+förhållande till skadans menliga inverkan på arbetsgivarens eller uppdragsgivares verksamhet. 
+ 
+§ 9 Övriga sanktioner 
+Utgivande av skadestånd eller vite enligt § 7 och § 8 inverkar ej på arbetsgivarens rätt att göra 
+andra påföljder än dessa gällande i anledning av kontraktsbrottet. 
+--- PAGE BREAK ---
+
+Sekretessavtal v2.0 (kopia).docx  
+Version: 2.1 
+ 
+Författare: Magnus Kling 
+ 
+Senast ändrad 
+2022-03-30 
+
+§ 10 Ytterligare reglering 
+Arbetstagaren påminns om att konfidentiell information även skyddas exempelvis genom Lag 
+(1990:409) om skydd för företagshemligheter samt genom Lag (2004:297) om bank- och 
+finansieringsrörelse. 
+ 
+§ 11 Sekretessåtagandets längd 
+Sekretessåtagandet enligt avtalet är bindande såväl under anställningen som efter det att 
+anställningen upphört, såvida ej arbetstagaren erhållit arbetsgivarens och uppdragsgivarens 
+skriftliga medgivanden. 
+ 
+§ 12 Rätt till arbetsresultat 
+Arbetsgivaren äger automatiskt, utan annat vederlag än vad som kan följa av tvingande lag och 
+kollektivavtal, alla rättigheter, inklusive men inte begränsat till äganderätt, upphovsrätt och 
+samtliga andra immateriella rättigheter, innefattande rätt att överlåta och/eller upplåta hela eller 
+del av sådan rättighet, till allt resultat av arbete som arbetstagaren utfört i anställningen, 
+självständigt eller i förening med andra, oavsett vilken typ av material/arbetsresultat det är fråga 
+om (skriftligt material, databaserat material, fotografier, videoupptagningar, system, 
+programvaror samt andra verk, produkter och annat arbetsresultat). Arbetsgivaren har vidare 
+rätt att bearbeta och ändra i arbetsresultatet.  
+Om arbetstagaren vid utförande av sitt arbete finner det nödvändigt att överlåta eller upplåta 
+rättighet till arbetsresultat till annan, t.ex. på grund av villkor vid användning av open source 
+programvara, ska detta först godkännas av arbetsgivaren. 
+ 
+§ 13 Administration av immateriella rättigheter  
+Arbetstagaren skall under anställningen på alla sätt samt efter anställningens upphörande 
+genom undertecknande av handlingar och dylika åtgärder, vara Bolaget behjälplig med att 
+skapa, upprätthålla eller på annat sätt förfoga över immateriella och andra rättigheter enligt 
+ovan. 
+ 
+§ 14 Undertecknande 
+Arbetstagaren intygar genom sin namnteckning att hen till fullo förstått innebörden av avtalet 
+och att hen beretts tillfälle att ställa frågor avseende avtalets innehåll och omfattning. 
+
+Ort och datum 
+
+_____________________________ 
+ 
+Ort och datum 
+
+_____________________________ 
+ 
+För arbetsgivaren 
+
+_____________________________ 
+ 
+Arbetstagaren 
+
+_____________________________ 
+ 
+Namnförtydligande 
+
+_____________________________ 
+ 
+Namnförtydligande 
+
+_____________________________ 
+
+--- PAGE BREAK ---

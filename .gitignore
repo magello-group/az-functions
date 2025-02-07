@@ -20,7 +20,7 @@ project.lock.json
 .secrets
 appsettings.json
 local.settings.json
-
+.DS_Store
 node_modules
 dist
 OLD-es-lint-rc.js
